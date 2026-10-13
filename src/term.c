@@ -734,10 +734,12 @@ term_mouse(Win *w, Mouse *m)
 	Tbuf *b;
 	Point p, c;
 	int edge, y;
-	long q;
+	long q, q0, q1;
 
 	t = w->term;
 	b = &t->tb;
+	q0 = b->q0;
+	q1 = b->q1;
 	p = subpt(m->xy, Pt(w->q.dx, w->q.dy));
 	edge = m->buttons & ~t->lastb;
 	y = t->my = clampl(p.y, t->scrollr.min.y, t->scrollr.max.y);
@@ -792,7 +794,9 @@ term_mouse(Win *w, Mouse *m)
 			setorigin(t, tbuf_bol(b, (vlong)b->nr * (y - t->scrollr.min.y) / Dy(t->scrollr)));
 	}
 	t->lastb = m->buttons;
-	sync(w);
+	/* plain motion draws nothing, as rio: a flush per event flickers a software cursor */
+	if(t->stale || b->q0 != q0 || b->q1 != q1)
+		sync(w);
 }
 
 void

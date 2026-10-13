@@ -1,0 +1,26 @@
+size 1000 600
+gap 4
+center on-overflow
+add
+switch-preset-column-width
+switch-preset-column-width
+add
+switch-preset-column-width
+switch-preset-column-width
+add
+switch-preset-column-width
+switch-preset-column-width
+add
+switch-preset-column-width
+switch-preset-column-width
+dump
+focus-column-left
+dump
+focus-column-left
+dump
+focus-column-right
+dump
+focus-column-last
+dump
+focus-column-first
+dump

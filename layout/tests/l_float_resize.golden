@@ -1,0 +1,18 @@
+desk cur 0 nws 3 nwin 4
+place 1 t full scr 4 4 498 596
+place 3 t full scr 502 4 996 596 *
+place 2 f full scr 600 300 900 500
+place 4 f parked scr 700 100 1000 600
+hidden
+desk cur 0 nws 3 nwin 4
+place 1 t full scr 4 4 248 396
+place 3 t full scr 252 4 496 396 *
+place 2 f full scr 200 200 500 400
+place 4 f parked scr 200 0 500 400
+hidden
+desk cur 0 nws 3 nwin 4
+place 1 t full scr 4 4 498 596
+place 3 t full scr 502 4 996 596 *
+place 2 f full scr 200 200 500 400
+place 4 f parked scr 200 0 500 400
+hidden

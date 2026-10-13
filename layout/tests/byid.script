@@ -1,0 +1,28 @@
+size 1000 600
+gap 4
+add
+add
+add
+dump
+closeid 2
+dump
+focusid 1
+dump
+closeid 1
+dump
+add
+add
+closeid 3
+dump
+closeid 99
+focusid 99
+dump
+widthid 4 667
+dump
+widthid 4 50
+dump
+widthid 4 5000
+dump
+widthid 99 300
+focusid 4
+dump

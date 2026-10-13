@@ -1,0 +1,20 @@
+> snap 2 1 1
+> win 1 1 tile 500 rc 12
+> win 2 1 float 0 stats
+> win 3 1 hid 0 acme
+> commit
+ev wsadd 1
+ev wsadd 2
+ev ws 1
+ev open 1 'rc 12'
+ev open 2 stats
+ev float 2
+ev open 3 acme
+ev hide 3
+ev focus 1
+> state
+workspaces 2 current 1
+win 1 1 tile 500 'rc 12'
+win 2 1 float 0 stats
+win 3 0 hidden 0 acme
+focus 1

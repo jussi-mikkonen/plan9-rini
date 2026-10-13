@@ -1,0 +1,29 @@
+# leaving an emptied middle workspace deletes it and shifts the rest up
+size 1000 600
+add
+focus-workspace-down
+add
+focus-workspace-down
+add
+dumpall
+# ws 1 (window 2) is closed while focused there, then we leave it
+focus-workspace 2
+close
+dumpall
+focus-workspace-down
+dumpall
+# window 3 is now on index 1, so focus-workspace 2 stays put
+focus-workspace 2
+dumpall
+# closing the only window of the bottom-but-one ws: two empties while focused,
+# one after switching away
+close
+dumpall
+focus-workspace-up
+dumpall
+# closing a window on another workspace by id drops its empty ws at once
+focus-workspace-down
+add
+focus-workspace 1
+closeid 4
+dumpall

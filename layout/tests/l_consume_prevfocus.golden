@@ -1,0 +1,8 @@
+view 0 focus 1 n 3
+col 1 w 500 x 4 px 494 scr 4 4 498 596 full*
+col 2 w 500 x 502 px 494 scr 502 4 996 596 full
+col 3 w 667 x 1000 px 660 scr 1000 4 1660 596 off
+view 0 focus 1 n 2
+win 1 c 0 w 500 x 4 px 494 scr 4 4 498 298 full*
+win 2 c 0 w 500 x 4 px 494 scr 4 302 498 596 full
+col 3 w 667 x 502 px 660 scr 502 4 1162 596 part

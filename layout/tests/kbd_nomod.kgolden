@@ -1,0 +1,10 @@
+> bind F5 once spawn
+error chord must include Mod: F5
+> bind Ctrl+Alt+x once spawn
+error chord must include Mod: Ctrl+Alt+x
+> bind Mod4+h once spawn
+error chord must include Mod: Mod4+h
+> bind Mod+F5 once spawn
+ok
+> list
+bind Mod+F5 once spawn

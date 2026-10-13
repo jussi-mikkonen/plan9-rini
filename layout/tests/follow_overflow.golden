@@ -1,0 +1,30 @@
+view 661 focus 4 n 4
+col 1 w 333 x 4 px 327 scr -657 4 -330 596 off
+col 2 w 333 x 335 px 327 scr -326 4 1 596 part
+col 3 w 333 x 666 px 327 scr 5 4 332 596 full
+col 4 w 333 x 997 px 327 scr 336 4 663 596 full*
+view 661 focus 3 n 4
+col 1 w 333 x 4 px 327 scr -657 4 -330 596 off
+col 2 w 333 x 335 px 327 scr -326 4 1 596 part
+col 3 w 333 x 666 px 327 scr 5 4 332 596 full*
+col 4 w 333 x 997 px 327 scr 336 4 663 596 full
+view 331 focus 2 n 4
+col 1 w 333 x 4 px 327 scr -327 4 0 596 off
+col 2 w 333 x 335 px 327 scr 4 4 331 596 full*
+col 3 w 333 x 666 px 327 scr 335 4 662 596 full
+col 4 w 333 x 997 px 327 scr 666 4 993 596 full
+view 331 focus 3 n 4
+col 1 w 333 x 4 px 327 scr -327 4 0 596 off
+col 2 w 333 x 335 px 327 scr 4 4 331 596 full
+col 3 w 333 x 666 px 327 scr 335 4 662 596 full*
+col 4 w 333 x 997 px 327 scr 666 4 993 596 full
+view 331 focus 4 n 4
+col 1 w 333 x 4 px 327 scr -327 4 0 596 off
+col 2 w 333 x 335 px 327 scr 4 4 331 596 full
+col 3 w 333 x 666 px 327 scr 335 4 662 596 full
+col 4 w 333 x 997 px 327 scr 666 4 993 596 full*
+view -333 focus 1 n 4
+col 1 w 333 x 4 px 327 scr 337 4 664 596 full*
+col 2 w 333 x 335 px 327 scr 668 4 995 596 full
+col 3 w 333 x 666 px 327 scr 999 4 1326 596 part
+col 4 w 333 x 997 px 327 scr 1330 4 1657 596 off

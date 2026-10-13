@@ -1,0 +1,20 @@
+size 1000 600
+add
+add
+add
+add
+dump
+# swap focused 4 with 3
+move-column-left
+dump
+move-column-left
+move-column-left
+# at the left edge: no-op
+move-column-left
+dump
+move-column-right
+move-column-right
+move-column-right
+# at the right edge: no-op
+move-column-right
+dump

@@ -1,0 +1,82 @@
+> q 0 init
+> q 0 open kbd
+> q 0 kbd k 61
+> q 0 kbd k 61
+> q 0 kbd k 61
+> q 0 kbd k 61
+> q 0 kbd k 61
+> q 0 kbd k 61
+> q 0 kbd k 61
+> q 0 kbd k 61
+> q 0 kbd k 61
+> q 0 kbd k 61
+> q 0 kbd k 61
+> q 0 kbd k 61
+> q 0 kbd k 61
+> q 0 kbd k 61
+> q 0 kbd k 61
+> q 0 kbd k 61
+> q 0 kbd k 61
+> q 0 kbd k 61
+> q 0 kbd k 61
+> q 0 kbd k 61
+> q 0 kbd k 61
+> q 0 kbd k 61
+> q 0 kbd k 61
+> q 0 kbd k 61
+> q 0 kbd k 61
+> q 0 kbd k 61
+> q 0 kbd k 61
+> q 0 kbd k 61
+> q 0 kbd k 61
+> q 0 kbd k 61
+> q 0 kbd k 61
+> q 0 kbd k 61
+> q 0 kbd K
+> q 0 read kbd 512
+kbd n=95 [ka\0ka\0ka\0ka\0ka\0ka\0ka\0ka\0ka\0ka\0ka\0ka\0ka\0ka\0ka\0ka\0ka\0ka\0ka\0ka\0ka\0ka\0ka\0ka\0ka\0ka\0ka\0ka\0ka\0ka\0ka\0K\0]
+> q 1 init
+> q 1 open kbd
+> q 1 kbd c 62
+> q 1 kbd c 62
+> q 1 kbd c 62
+> q 1 kbd c 62
+> q 1 kbd c 62
+> q 1 kbd c 62
+> q 1 kbd c 62
+> q 1 kbd c 62
+> q 1 kbd c 62
+> q 1 kbd c 62
+> q 1 kbd c 62
+> q 1 kbd c 62
+> q 1 kbd c 62
+> q 1 kbd c 62
+> q 1 kbd c 62
+> q 1 kbd c 62
+> q 1 kbd c 62
+> q 1 kbd c 62
+> q 1 kbd c 62
+> q 1 kbd c 62
+> q 1 kbd c 62
+> q 1 kbd c 62
+> q 1 kbd c 62
+> q 1 kbd c 62
+> q 1 kbd c 62
+> q 1 kbd c 62
+> q 1 kbd c 62
+> q 1 kbd c 62
+> q 1 kbd c 62
+> q 1 kbd c 62
+> q 1 kbd c 62
+> q 1 kbd c 62
+> q 1 kbd c 63
+> q 1 kbd K
+> q 1 read kbd 512
+kbd n=95 [cb\0cb\0cb\0cb\0cb\0cb\0cb\0cb\0cb\0cb\0cb\0cb\0cb\0cb\0cb\0cb\0cb\0cb\0cb\0cb\0cb\0cb\0cb\0cb\0cb\0cb\0cb\0cb\0cb\0cb\0cb\0K\0]
+> q 2 init
+> q 2 open kbd
+> q 2 kbd k 61
+> q 2 unfocus
+> q 2 kbd k 77
+> q 2 read kbd 64
+kbd n=8 [ka\0K\0kw\0]

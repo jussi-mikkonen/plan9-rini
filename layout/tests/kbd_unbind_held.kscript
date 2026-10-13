@@ -1,0 +1,20 @@
+# A held repeat chord keeps its action across a runtime unbind, of an earlier
+# entry or of itself.
+defaults
+k F868
+k F868 2D
+c 2D
+c 2D
+unbind Mod+t
+c 2D
+K F868
+K
+k F868
+k F868 F011
+k F868 F011
+unbind Mod+Left
+k F868 F011
+c F011
+c F011
+K F868
+K

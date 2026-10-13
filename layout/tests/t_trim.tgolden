@@ -1,0 +1,64 @@
+> t init 40 20
+> t out 31 31 31 31 31 31 31 31 31 A 32 32 32 32 32 32 32 32 32 A 33 33 33 33 33 33 33 33 33 A 34 34 34 34 34 34 34 34 34 A 35 35 35 35 35 35 35 35 35 A
+> t show
+nr=20 qh=20 q0=20 q1=20 rawing=0 holding=0 nraw=0 chg=0 trimmed=30
+text n=20 [444444444\x0A555555555\x0A]
+> t init 40 20
+> t out 31 31 31 31 31 31 31 A 32 32 32 32 32 32 32 A 33 33 33 33 33 33 33 A 34 34 34 34 34 34 34 A 35 35 35 35 35 35 35 A 36 36 36 36 36 36 36 36 36 36 36 36 36 36 A
+> t show
+nr=15 qh=15 q0=15 q1=15 rawing=0 holding=0 nraw=0 chg=0 trimmed=40
+text n=15 [66666666666666\x0A]
+> t clean
+> t show
+nr=15 qh=15 q0=15 q1=15 rawing=0 holding=0 nraw=0 chg=-1 trimmed=0
+text n=15 [66666666666666\x0A]
+> t init 40 20
+> t ins 0 31 31 31 31 31 31 31 31 31 A 32 32 32 32 32 32 32 32 32 A 33 33 33 33 33 33 33 33 33 A 34 34 34 34 34 34 34 34 34 A 35 35 35 35 35
+> t show
+nr=45 qh=0 q0=45 q1=45 rawing=0 holding=0 nraw=0 chg=0 trimmed=0
+text n=45 [111111111\x0A222222222\x0A333333333\x0A444444444\x0A55555]
+> t init 40 20
+> t out 61 A 62 A
+> t ins 4 31 31 31 31 31 31 31 31 31 A 32 32 32 32 32 32 32 32 32 A 33 33 33 33 33 33 33 33 33 A 34 34 34 34 34 34 34 34 34 A
+> t show
+nr=40 qh=0 q0=40 q1=40 rawing=0 holding=0 nraw=0 chg=0 trimmed=4
+text n=40 [111111111\x0A222222222\x0A333333333\x0A444444444\x0A]
+> t init 1000 500
+> t out 61 62 63 64 A 65 66 67 A 68 A
+> t bol 0
+0
+> t bol 3
+0
+> t bol 7
+5
+> t bol 10
+9
+> t eol 0
+4
+> t eol 5
+8
+> t eol 9
+10
+> t eol 10
+10
+> t backnl 10 0
+9
+> t backnl 10 1
+9
+> t backnl 10 2
+5
+> t backnl 10 5
+0
+> t backnl 7 1
+5
+> t init 20 10
+> t out 61 62 63 64 65 66 67 68 A 61 62 63 64 65 66 67 68 A 61
+> t sel 1 1
+> t ins 1 31 32 33 34 35
+> t show
+nr=24 qh=24 q0=6 q1=6 rawing=0 holding=0 nraw=0 chg=0 trimmed=0
+text n=24 [a12345bcdefgh\x0Aabcdefgh\x0Aa]
+> t ins 24 7A
+> t show
+nr=2 qh=1 q0=0 q1=0 rawing=0 holding=0 nraw=0 chg=0 trimmed=23
+text n=2 [az]

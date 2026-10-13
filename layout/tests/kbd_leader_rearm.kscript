@@ -1,0 +1,13 @@
+# A second leader tap after an expired arm arms again; it does not disarm.
+mod leader F12
+defaults
+t 0
+k F00C
+K
+t 2000
+k F00C
+K
+t 2100
+k 68
+c 68
+K

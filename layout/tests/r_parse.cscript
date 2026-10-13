@@ -1,0 +1,17 @@
+# rule property parsing: accepted forms and every rejection
+rule '^acme$' float
+rule '^x$' width 1/3
+rule '^y$' width 640
+rule '^z$' workspace 2
+rule '^w$' rect 10 10 410 310
+rules
+rule '^x$'
+rule '^x$' bogus
+rule '^x$' width
+rule '^x$' width 0/3
+rule '^x$' width 3/0
+rule '^x$' width 4/3
+rule '^x$' workspace 0
+rule '^x$' workspace
+rule '^x$' rect 1 2 3
+rule '^x$' rect 1 2 3 q

@@ -1,0 +1,19 @@
+desk cur 0 nws 2 nwin 2
+place 1 t full scr 4 4 498 596
+place 2 f full scr 10 20 310 220 *
+hidden
+error no such id: 1
+error no such id: 9
+desk cur 0 nws 2 nwin 2
+place 1 t full scr 4 4 498 596
+place 2 f part scr -50 -50 100 100 *
+hidden
+desk cur 0 nws 2 nwin 2
+place 1 t full scr 4 4 498 596
+place 2 f part scr 900 500 1200 700 *
+hidden
+error bad argument: 2
+desk cur 0 nws 2 nwin 2
+place 1 t full scr 4 4 498 596
+place 2 t full scr 502 4 801 596 *
+hidden

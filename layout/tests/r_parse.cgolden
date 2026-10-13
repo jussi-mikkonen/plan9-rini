@@ -1,0 +1,36 @@
+> rule '^acme$' float
+ok
+> rule '^x$' width 1/3
+ok
+> rule '^y$' width 640
+ok
+> rule '^z$' workspace 2
+ok
+> rule '^w$' rect 10 10 410 310
+ok
+> rules
+rule ^acme$ float
+rule ^x$ width 1/3
+rule ^y$ width 640
+rule ^z$ workspace 2
+rule ^w$ rect 10 10 410 310
+> rule '^x$'
+error rule: want regexp props
+> rule '^x$' bogus
+error bad property: bogus
+> rule '^x$' width
+error width needs a value
+> rule '^x$' width 0/3
+error bad width: 0/3
+> rule '^x$' width 3/0
+error bad width: 3/0
+> rule '^x$' width 4/3
+error bad width: 4/3
+> rule '^x$' workspace 0
+error bad workspace: 0
+> rule '^x$' workspace
+error workspace needs a number
+> rule '^x$' rect 1 2 3
+error rect needs four numbers
+> rule '^x$' rect 1 2 3 q
+error bad rect: q

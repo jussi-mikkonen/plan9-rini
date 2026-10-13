@@ -1,0 +1,59 @@
+> parse bind
+error bind: want chord [once|repeat] action
+> parse bind Mod+e
+error bind: want chord [once|repeat] action
+> parse bind Mod+e repeat
+error bind: want chord [once|repeat] action
+> parse unbind
+error unbind: want chord
+> parse termbind Ctrl+u
+error termbind: want key action
+> parse termbind
+error termbind: want key action
+> parse set
+error set: want name value
+> parse set mod
+error set: want name value
+> parse set bogus 1
+error unknown setting: bogus
+> parse set c64return maybe
+error c64return: want on or off
+> parse set background nothex
+error bad colour: nothex (want 0xRRGGBBAA)
+> parse rule
+error rule: want regexp props
+> parse rule '('
+error rule: want regexp props
+> parse rule 'open float
+error unterminated quote
+> parse unrule
+error unrule: want regexp
+> parse unrule a b
+error unrule: want regexp
+> parse rule a 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+verb=rule set=-
+arg[0]=[a]
+arg[1]=[1]
+arg[2]=[2]
+arg[3]=[3]
+arg[4]=[4]
+arg[5]=[5]
+arg[6]=[6]
+arg[7]=[7]
+arg[8]=[8]
+arg[9]=[9]
+arg[10]=[10]
+arg[11]=[11]
+arg[12]=[12]
+arg[13]=[13]
+arg[14]=[14]
+arg[15]=[15]
+> parse rule a 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+error too many words
+> parselong 1023
+verb=action set=-
+rest=[xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx]
+> parselong 1024
+error line too long
+> parselong 1025
+error line too long

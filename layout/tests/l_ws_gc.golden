@@ -1,0 +1,26 @@
+desk cur 2 nws 4 nwin 3
+place 3 t full scr 4 4 498 596 *
+place 1 t parked scr 4 4 498 596
+place 2 t parked scr 4 4 498 596
+hidden
+desk cur 1 nws 4 nwin 2
+place 1 t parked scr 4 4 498 596
+place 3 t parked scr 4 4 498 596
+hidden
+desk cur 1 nws 3 nwin 2
+place 3 t full scr 4 4 498 596 *
+place 1 t parked scr 4 4 498 596
+hidden
+desk cur 1 nws 3 nwin 2
+place 3 t full scr 4 4 498 596 *
+place 1 t parked scr 4 4 498 596
+hidden
+desk cur 1 nws 3 nwin 1
+place 1 t parked scr 4 4 498 596
+hidden
+desk cur 0 nws 2 nwin 1
+place 1 t full scr 4 4 498 596 *
+hidden
+desk cur 0 nws 2 nwin 1
+place 1 t full scr 4 4 498 596 *
+hidden

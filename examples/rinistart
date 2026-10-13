@@ -1,0 +1,15 @@
+#!/bin/rc
+# Example rini startup script. Copy it to $home/lib/rinistart (the default
+# for rini -i). The profile line is just `rini`, with no fallback to rio.
+# Everything goes through /mnt/rini/ctl; errors land in $home/lib/rinistart.log
+# because rini owns the screen once it runs.
+{
+	echo 'set background 0x777777FF' >/mnt/rini/ctl
+	echo 'bind Mod+e once spawn acme' >/mnt/rini/ctl
+	# games started with window(1) get their basename as first label
+	echo 'rule ''^(sudoku|mines|cat clock|life|juggle|memo)$'' float' >/mnt/rini/ctl
+	# games started with `spawn games/x` carry the path
+	echo 'rule ''^games/'' float' >/mnt/rini/ctl
+	# the initial window
+	echo spawn >/mnt/rini/ctl
+} >[2]$home/lib/rinistart.log

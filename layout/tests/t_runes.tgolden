@@ -1,0 +1,32 @@
+> u reset
+> u C3
+runes=0 [] carry=1
+> u A5 61
+runes=2 [E5 61] carry=0
+> u E2 82
+runes=0 [] carry=2
+> u AC
+runes=1 [20AC] carry=0
+> u FF 61
+runes=2 [FFFD 61] carry=0
+> u F0 9F 98 80
+runes=1 [1F600] carry=0
+> u 80
+runes=1 [FFFD] carry=0
+> u E2
+runes=0 [] carry=1
+> u 61
+runes=2 [FFFD 61] carry=0
+> u 61 00 62 00
+runes=2 [61 62] carry=0
+> t init 1000 500
+> t ins 0 E5 A
+> t read 1
+cons n=1 [\xC3]
+> t read 1
+cons n=1 [\xA5]
+> t read 1
+cons n=1 [\x0A]
+> t show
+nr=2 qh=2 q0=2 q1=2 rawing=0 holding=0 nraw=0 chg=0 trimmed=0
+text n=3 [\xC3\xA5\x0A]

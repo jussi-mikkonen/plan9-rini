@@ -1,0 +1,118 @@
+> tapfocus 4
+> tappush ka
+> tapfocus 7
+> tappush kb
+> tapread
+tap 3 [z4\0]
+> tapfrom
+from 4
+> tapread
+tap 3 [ka\0]
+> tapread
+tap 3 [z7\0]
+> tapfrom
+from 7
+> tapread
+tap 3 [kb\0]
+> tapfocus 9
+> tappush ka
+> tappush ka
+> tappush ka
+> tappush ka
+> tappush ka
+> tappush ka
+> tappush ka
+> tappush ka
+> tappush ka
+> tappush ka
+> tappush ka
+> tappush ka
+> tappush ka
+> tappush ka
+> tappush ka
+> tappush ka
+> tappush ka
+> tappush ka
+> tappush ka
+> tappush ka
+> tappush ka
+> tappush ka
+> tappush ka
+> tappush ka
+> tappush ka
+> tappush ka
+> tappush ka
+> tappush ka
+> tappush ka
+> tappush ka
+> tappush ka
+> tappush cz
+> tappush K
+> tapread
+tap 3 [z9\0]
+> tapread
+tap 3 [ka\0]
+> tapread
+tap 3 [ka\0]
+> tapread
+tap 3 [ka\0]
+> tapread
+tap 3 [ka\0]
+> tapread
+tap 3 [ka\0]
+> tapread
+tap 3 [ka\0]
+> tapread
+tap 3 [ka\0]
+> tapread
+tap 3 [ka\0]
+> tapread
+tap 3 [ka\0]
+> tapread
+tap 3 [ka\0]
+> tapread
+tap 3 [ka\0]
+> tapread
+tap 3 [ka\0]
+> tapread
+tap 3 [ka\0]
+> tapread
+tap 3 [ka\0]
+> tapread
+tap 3 [ka\0]
+> tapread
+tap 3 [ka\0]
+> tapread
+tap 3 [ka\0]
+> tapread
+tap 3 [ka\0]
+> tapread
+tap 3 [ka\0]
+> tapread
+tap 3 [ka\0]
+> tapread
+tap 3 [ka\0]
+> tapread
+tap 3 [ka\0]
+> tapread
+tap 3 [ka\0]
+> tapread
+tap 3 [ka\0]
+> tapread
+tap 3 [ka\0]
+> tapread
+tap 3 [ka\0]
+> tapread
+tap 3 [ka\0]
+> tapread
+tap 3 [ka\0]
+> tapread
+tap 3 [ka\0]
+> tapread
+tap 3 [cz\0]
+> tapread
+tap 2 [K\0]
+> tapread
+empty
+> tapsplit 636100636100636100636100636100636100636100636100636100
+error too many messages

@@ -1,0 +1,30 @@
+# A k never drops a held key (kbdfs reports releases with K). When one does,
+# a K was lost (focus loss, a malformed or split message): start over.
+defaults
+# Mod+h, then the keys are released elsewhere; back in focus a plain h
+k F868
+k F868 68
+c 68
+k 68
+c 68
+c 68
+K
+# Mod+h gone in an empty k, then a plain h
+k F868
+k F868 68
+c 68
+k
+K
+k 68
+c 68
+K
+# leader down, then gone in an empty k: not held, not armed
+mod leader F12
+k F00C
+modheld
+k
+modheld
+K
+k 68
+c 68
+K

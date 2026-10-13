@@ -1,0 +1,26 @@
+view 0 focus 1 n 1
+col 1 w 500 x 4 px 494 scr 4 4 498 596 full*
+view 298 focus 3 n 3
+col 1 w 500 x 4 px 494 scr -294 4 200 596 part
+col 2 w 300 x 502 px 294 scr 204 4 498 596 full
+col 3 w 300 x 800 px 294 scr 502 4 796 596 full*
+view 298 focus 3 n 2
+col 1 w 500 x 4 px 494 scr -294 4 200 596 part
+win 2 c 1 w 300 x 502 px 294 scr 204 4 498 298 full
+win 3 c 1 w 300 x 502 px 294 scr 204 302 498 596 full*
+view 298 focus 3 n 3
+col 1 w 500 x 4 px 494 scr -294 4 200 596 part
+col 3 w 300 x 502 px 294 scr 204 4 498 596 full*
+col 2 w 300 x 800 px 294 scr 502 4 796 596 full
+view 298 focus 3 n 2
+col 1 w 500 x 4 px 494 scr -294 4 200 596 part
+win 2 c 1 w 300 x 502 px 294 scr 204 4 498 298 full
+win 3 c 1 w 300 x 502 px 294 scr 204 302 498 596 full*
+view 298 focus 3 n 3
+col 1 w 500 x 4 px 494 scr -294 4 200 596 part
+col 2 w 300 x 502 px 294 scr 204 4 498 596 full
+col 3 w 300 x 800 px 294 scr 502 4 796 596 full*
+view 0 focus 1 n 3
+col 1 w 500 x 4 px 494 scr 4 4 498 596 full*
+col 2 w 300 x 502 px 294 scr 502 4 796 596 full
+col 3 w 300 x 800 px 294 scr 800 4 1094 596 part

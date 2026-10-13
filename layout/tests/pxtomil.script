@@ -1,0 +1,11 @@
+size 1000 600
+gap 4
+add
+widthpx 1 494
+dump
+widthpx 1 300
+dump
+widthpx 1 10
+dump
+widthpx 1 5000
+dump

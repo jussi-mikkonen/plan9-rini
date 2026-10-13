@@ -1,0 +1,24 @@
+# SYNTHETIC, hand-made, not recorded. unbind, the binding line formatter and
+# modifier round trips.
+defaults
+mod Mod4
+bind Mod+e once spawn acme
+unbind Mod+e
+unbind Mod+e
+unbind Mod+
+unbind Mod+Shift+q
+# lines: one formatter, "chord once|repeat action"
+lines
+# the default overlay chord is bound once
+unbind Mod+F1
+unbind Mod+F1
+# modfmt round trips through mod
+modfmt
+mod Ctrl+Alt
+modfmt
+mod Mod4+Ctrl
+modfmt
+mod leader F12
+modfmt
+mod Mod4
+modfmt

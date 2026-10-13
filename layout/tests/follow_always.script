@@ -1,0 +1,11 @@
+size 1000 600
+gap 4
+center always
+add
+add
+add
+dump
+focus-column-left
+dump
+focus-column-left
+dump

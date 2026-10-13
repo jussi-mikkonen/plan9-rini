@@ -1,0 +1,149 @@
+# typing inserts at the cursor; qh stays at the output point
+t init 1000 500
+t out 3B 20
+t key insert 61
+t show
+# typing replaces the selection
+t ins 2 62 63 64
+t sel 3 4
+t key insert 78
+t show
+# left and right clamp at both ends and collapse the selection
+t init 1000 500
+t out 61 62
+t key left
+t show
+t key left
+t key left
+t show
+t key right
+t key right
+t key right
+t show
+t sel 0 2
+t key right
+t show
+t sel 0 2
+t key left
+t show
+# up and down keep the column across a short line
+t init 1000 500
+t out 61 62 63 64 65 66 A 61 62 A 61 62 63 64 65 66
+t sel 14 14
+t key up
+t show
+t key up
+t show
+t key down
+t key down
+t show
+t key down
+t show
+t sel 2 2
+t key up
+t show
+# backspace, kill-word and kill-line stop at the output point
+t init 1000 500
+t out 3B 20
+t ins 2 61 62 63
+t sel 2 2
+t key backspace
+t show
+t sel 5 5
+t key backspace
+t show
+t init 1000 500
+t out 3B 20
+t ins 2 66 6F 6F 20 62 61 72
+t sel 9 9
+t key kill-word
+t show
+t key kill-word
+t show
+t key kill-word
+t show
+t init 1000 500
+t out 3B 20
+t ins 2 66 6F 6F 20 62 61 72
+t sel 9 9
+t key kill-line
+t show
+t key kill-line
+t show
+# in old text kill-line goes back to the line start and qh shifts left
+t init 1000 500
+t out 61 62 63 A 3B 20
+t sel 2 2
+t key kill-line
+t show
+# a selection is deleted by the kill keys, nothing more
+t init 1000 500
+t ins 0 61 62 63 64
+t sel 1 3
+t key backspace
+t show
+# line-start stops at qh, line-end, output-point, end
+t init 1000 500
+t out 3B 20
+t ins 2 61 62 63 64
+t sel 5 5
+t key line-start
+t show
+t key line-end
+t show
+t key output-point
+t show
+t key end
+t show
+t out 6F 6B A
+t sel 1 1
+t key line-start
+t show
+t key line-end
+t show
+# hold toggles and is counted
+t init 1000 500
+t key hold
+t show
+t key hold
+t show
+# interrupt abandons pending input
+t init 1000 500
+t out 3B 20
+t ins 2 78 79 7A
+t key interrupt
+t show
+# interrupt while held clears the hold first
+t init 1000 500
+t key hold
+t key interrupt
+t show
+# tab completes after a non-space, inserts a tab after whitespace and at line start
+t init 1000 500
+t out 3B 20
+t ins 2 6C 73 20 2F 75 73
+t key tab
+t show
+t init 1000 500
+t out 3B 20
+t key tab
+t show
+t init 1000 500
+t out 3B 20
+t ins 2 6C 73 20
+t key tab
+t show
+t key complete
+t show
+# the view actions leave the buffer alone
+t init 1000 500
+t out 61 A 62
+t sel 1 1
+t key scroll-line-up
+t key scroll-line-down
+t key page-up
+t key page-down
+t key top
+t show
+# unknown action
+t key bogus

@@ -1,0 +1,12 @@
+# set background accepts exactly 0x + 8 hex digits
+colour 0x224466FF
+colour 0x224466ff
+colour 0X224466FF
+colour 0x224466
+colour 224466FF
+colour 0xGGGGGGGG
+colour 0x224466FF00
+colour 0x
+colour 
+parse set background 0x224466
+parse set background 0x224466ff

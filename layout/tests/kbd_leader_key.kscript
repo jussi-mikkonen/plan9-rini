@@ -1,0 +1,10 @@
+# The leader key is never forwarded, so it must not be a key clients need:
+# no printable or control rune (BackSpace and Escape are also Ctrl+h, Ctrl+[).
+mod leader BackSpace
+mod leader Escape
+mod leader Tab
+mod leader Return
+mod leader Delete
+mod leader a
+mod leader F12
+modfmt

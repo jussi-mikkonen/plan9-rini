@@ -1,0 +1,40 @@
+> clear
+> place 1 4 4 500 596
+> place 2 504 4 1000 596
+> focus 1
+> route 600 100 1
+to=0 focus=2 swallow=1 grab=0
+> route 610 100 1
+to=0 focus=0 swallow=1 grab=0
+> route 610 100 0
+to=0 focus=0 swallow=0 grab=0
+> route 610 100 1
+to=2 focus=0 swallow=0 grab=2
+> route 100 100 1
+to=2 focus=0 swallow=0 grab=2
+> route 100 100 0
+to=2 focus=0 swallow=0 grab=0
+> route 620 100 0
+to=2 focus=0 swallow=0 grab=0
+> route 100 100 0
+to=0 focus=0 swallow=0 grab=0
+> route 502 100 0
+to=0 focus=0 swallow=0 grab=0
+> route 100 100 4
+to=1 focus=1 swallow=0 grab=1
+> route 100 100 0
+to=1 focus=0 swallow=0 grab=0
+> route 600 100 8
+to=0 focus=0 swallow=0 grab=0
+> route 600 100 0
+to=0 focus=0 swallow=0 grab=0
+> route 100 100 8
+to=1 focus=0 swallow=0 grab=0
+> route 100 100 0
+to=1 focus=0 swallow=0 grab=0
+> route 2 2 1
+to=0 focus=0 swallow=0 grab=0
+> route 2 2 0
+to=0 focus=0 swallow=0 grab=0
+> route 2 2 0
+to=0 focus=0 swallow=0 grab=0

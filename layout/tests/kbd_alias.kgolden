@@ -1,0 +1,56 @@
+> mod Mod4
+ok
+> defaults
+> bind Mod+Mod4+q once spawn
+ok
+> k F868
+fwd k F868
+> k F868 71
+act delete
+> K F868
+> K
+fwd K
+> unbind Mod+q
+ok
+> k F868
+fwd k F868
+> k F868 71
+fwd k F868 71
+> c 71
+fwd c 71
+> K F868
+fwd K F868
+> K
+fwd K
+> mod Ctrl+Alt
+ok
+> unbind Mod+h
+ok
+> k F015
+fwd k F015
+> k F015 F017
+fwd k F015 F017
+> k F015 F017 8
+fwd k F015 F017 8
+> c 8
+fwd c 8
+> K F015 F017
+fwd K F015 F017
+> K
+fwd K
+> mod Mod4+Ctrl
+ok
+> unbind Mod+l
+ok
+> k F868
+fwd k F868
+> k F868 F017
+fwd k F868 F017
+> k F868 F017 C
+fwd k F868 F017 C
+> c C
+fwd c C
+> K F868 F017
+fwd K F868 F017
+> K
+fwd K

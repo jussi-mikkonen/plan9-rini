@@ -1,0 +1,27 @@
+mod leader F12
+defaults
+# tap F12 arms; next key is a chord
+k F00C
+K
+k 68
+c 68
+K
+# not armed any more: passes through
+k 68
+c 68
+K
+# two taps disarm
+k F00C
+K
+k F00C
+K
+k 68
+K
+# leader used as a modifier does not arm
+k F00C
+k F00C 68
+c 68
+K F00C
+K
+k 68
+K

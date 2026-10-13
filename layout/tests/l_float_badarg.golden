@@ -1,0 +1,7 @@
+focused 2 layer float
+error bad argument: garbage
+error bad argument: x
+desk cur 0 nws 2 nwin 2
+place 1 t full scr 4 4 498 596
+place 2 f full scr 253 4 747 596 *
+hidden

@@ -1,0 +1,20 @@
+# bytes split across cons writes are carried and decoded whole
+u reset
+u C3
+u A5 61
+u E2 82
+u AC
+u FF 61
+u F0 9F 98 80
+u 80
+u E2
+u 61
+# NUL bytes are dropped, as rio does (cat of a directory)
+u 61 00 62 00
+# a cooked line read one byte at a time keeps the rest of the rune
+t init 1000 500
+t ins 0 E5 A
+t read 1
+t read 1
+t read 1
+t show

@@ -1,0 +1,45 @@
+> mod Ctrl+Alt
+ok
+> defaults
+> k F015
+fwd k F015
+> k F015 F017
+fwd k F015 F017
+> k F015 F017 8
+act focus-column-left
+> c 8
+> K F015 F017
+> K F017
+fwd K F017
+> K
+fwd K
+> k F015
+fwd k F015
+> k F015 F017
+fwd k F015 F017
+> k F015 F017 C
+act focus-column-right
+> c C
+> K F015 F017
+> K
+fwd K
+> k F015
+fwd k F015
+> k F015 F017
+fwd k F015 F017
+> k F015 F017 A
+act spawn
+> c A
+> K F015 F017
+> K
+fwd K
+> k F867
+fwd k F867
+> k F867 7B
+fwd k F867 7B
+> c 7B
+fwd c 7B
+> K F867
+fwd K F867
+> K
+fwd K

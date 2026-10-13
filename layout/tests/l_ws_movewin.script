@@ -1,0 +1,29 @@
+size 1000 600
+add
+add
+add
+focus-column-left
+consume-window-into-column
+set-column-width 30%
+dumpall
+# inside the stack it swaps and the window stays; 2 is now the bottom one
+move-window-down-or-to-workspace-down
+dumpall
+# past the bottom edge it becomes a new 30% column on the next workspace
+move-window-down-or-to-workspace-down
+dumpall
+# a lone window moves too; the emptied ws is left and so deleted
+move-window-up-or-to-workspace-up
+dumpall
+# numbered move onto the empty bottom ws makes a new empty one
+move-window-to-workspace 2
+dumpall
+move-window-to-workspace-up
+dumpall
+move-window-to-workspace-down
+dumpall
+# the current workspace and out of range are no-ops
+move-window-to-workspace 2
+move-window-to-workspace 9
+dumpall
+move-window-to-workspace x

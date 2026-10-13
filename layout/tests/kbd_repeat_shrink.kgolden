@@ -1,0 +1,12 @@
+> defaults
+> k F868
+fwd k F868
+> k F868 6C
+act focus-column-right
+> k F868 6C
+act focus-column-right
+> k 6C
+fwd k 6C
+> k
+fwd k
+> K

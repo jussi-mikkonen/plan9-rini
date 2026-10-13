@@ -1,0 +1,38 @@
+> clear
+> place 1 4 4 500 596
+> mpol 100 100 8 1000 1 0
+kind=Dwheel id=0 dir=-1 corner=0 dx=0 dy=0
+> mpol 100 100 0 1010 1 0
+kind=Dswallow id=0 dir=0 corner=0 dx=0 dy=0
+> mpol 100 100 8 1100 1 0
+kind=Dswallow id=0 dir=0 corner=0 dx=0 dy=0
+> mpol 100 100 0 1105 1 0
+kind=Dswallow id=0 dir=0 corner=0 dx=0 dy=0
+> mpol 100 100 16 1149 1 0
+kind=Dswallow id=0 dir=0 corner=0 dx=0 dy=0
+> mpol 100 100 0 1149 1 0
+kind=Dswallow id=0 dir=0 corner=0 dx=0 dy=0
+> mpol 100 100 16 1150 1 0
+kind=Dwheel id=0 dir=1 corner=0 dx=0 dy=0
+> mpol 100 100 0 1160 1 0
+kind=Dswallow id=0 dir=0 corner=0 dx=0 dy=0
+> mpol 100 100 16 1170 1 1
+kind=Dwheel id=1 dir=1 corner=0 dx=0 dy=0
+> mpol 100 100 0 1171 1 1
+kind=Dswallow id=0 dir=0 corner=0 dx=0 dy=0
+> mpol 100 100 8 1172 1 1
+kind=Dwheel id=1 dir=-1 corner=0 dx=0 dy=0
+> mpol 100 100 0 1173 1 1
+kind=Dswallow id=0 dir=0 corner=0 dx=0 dy=0
+> mpol 100 100 8 1200 0 0
+kind=Dpass id=1 dir=0 corner=0 dx=0 dy=0
+> mpol 100 100 0 1210 0 0
+kind=Dpass id=0 dir=0 corner=0 dx=0 dy=0
+> mpol 100 100 16 1220 0 1
+kind=Dpass id=1 dir=0 corner=0 dx=0 dy=0
+> mpol 100 100 0 1230 0 1
+kind=Dpass id=0 dir=0 corner=0 dx=0 dy=0
+> mpol 100 100 8 1400 1 0
+kind=Dwheel id=0 dir=-1 corner=0 dx=0 dy=0
+> mpol 100 100 0 1410 0 0
+kind=Dswallow id=0 dir=0 corner=0 dx=0 dy=0

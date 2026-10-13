@@ -1,0 +1,31 @@
+# hide closes the gap with the close rule; unhide is a new column on the current workspace
+size 1000 600
+add
+add
+add
+add
+focusid 2
+hide 2
+dumpall
+who
+hide 2
+hide 9
+dumpall
+focusid 3
+toggle-window-floating
+hide 3
+dumpall
+who
+focus-workspace-down
+unhide 2
+dumpall
+who
+unhide 2
+unhide 9
+dumpall
+hide 4
+dumpall
+closeid 4
+dumpall
+closeid 3
+dumpall

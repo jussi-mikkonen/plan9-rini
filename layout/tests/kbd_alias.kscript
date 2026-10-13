@@ -1,0 +1,33 @@
+# A chord matches only a binding with exactly its modifiers. Mod plus a key
+# of the mask itself (Mod+Mod4+q under Mod4, Mod+Ctrl+h under Ctrl+Alt) can
+# never be pressed apart from Mod+q / Mod+h, so it never fires and never
+# takes over when that binding is removed.
+mod Mod4
+defaults
+bind Mod+Mod4+q once spawn
+k F868
+k F868 71
+K F868
+K
+unbind Mod+q
+k F868
+k F868 71
+c 71
+K F868
+K
+mod Ctrl+Alt
+unbind Mod+h
+k F015
+k F015 F017
+k F015 F017 8
+c 8
+K F015 F017
+K
+mod Mod4+Ctrl
+unbind Mod+l
+k F868
+k F868 F017
+k F868 F017 C
+c C
+K F868 F017
+K

@@ -1,0 +1,44 @@
+# 5 lines of 10 runes: the cut at 30 already follows a newline
+t init 40 20
+t out 31 31 31 31 31 31 31 31 31 A 32 32 32 32 32 32 32 32 32 A 33 33 33 33 33 33 33 33 33 A 34 34 34 34 34 34 34 34 34 A 35 35 35 35 35 35 35 35 35 A
+t show
+# 5 lines of 8 plus one of 15: the cut at 35 moves on to the next line start
+t init 40 20
+t out 31 31 31 31 31 31 31 A 32 32 32 32 32 32 32 A 33 33 33 33 33 33 33 A 34 34 34 34 34 34 34 A 35 35 35 35 35 35 35 A 36 36 36 36 36 36 36 36 36 36 36 36 36 36 A
+t show
+t clean
+t show
+# pending input is never trimmed: type 45 runes with the output point at 0
+t init 40 20
+t ins 0 31 31 31 31 31 31 31 31 31 A 32 32 32 32 32 32 32 32 32 A 33 33 33 33 33 33 33 33 33 A 34 34 34 34 34 34 34 34 34 A 35 35 35 35 35
+t show
+# with output text before it, only that text goes
+t init 40 20
+t out 61 A 62 A
+t ins 4 31 31 31 31 31 31 31 31 31 A 32 32 32 32 32 32 32 32 32 A 33 33 33 33 33 33 33 33 33 A 34 34 34 34 34 34 34 34 34 A
+t show
+# three lines: 0 1 2 3 4 | 5 6 7 8 | 9 10
+t init 1000 500
+t out 61 62 63 64 A 65 66 67 A 68 A
+t bol 0
+t bol 3
+t bol 7
+t bol 10
+t eol 0
+t eol 5
+t eol 9
+t eol 10
+t backnl 10 0
+t backnl 10 1
+t backnl 10 2
+t backnl 10 5
+t backnl 7 1
+# an insert into old text never trims, even past hiwater: the inserted runes stay
+t init 20 10
+t out 61 62 63 64 65 66 67 68 A 61 62 63 64 65 66 67 68 A 61
+t sel 1 1
+t ins 1 31 32 33 34 35
+t show
+# an insert at qh trims old text up to a line boundary, never past qh
+t ins 24 7A
+t show

@@ -1,0 +1,39 @@
+> clear
+> place 1 4 4 500 596
+> place 2 200 100 400 300 f
+> hit 300 200
+hit 2
+> hit 100 200
+hit 1
+> hit 450 500
+hit 1
+> hit 600 300
+hit 0
+> clear
+> place 1 4 4 500 596
+> place 3 200 100 400 300 f parked
+> hit 300 200
+hit 1
+> clear
+> place 1 4 4 500 596
+> place 4 300 300 300 400
+> hit 300 350
+hit 1
+> clear
+> place 1 4 4 500 596
+> place 2 504 4 1000 596
+> focus 1
+> route 100 100 2
+to=1 focus=0 swallow=0 grab=1
+> mreset 0
+> route 600 100 1
+to=0 focus=2 swallow=1 grab=0
+> route 600 100 0
+to=0 focus=0 swallow=0 grab=0
+> mreset 1
+> route 100 100 1
+to=0 focus=0 swallow=1 grab=0
+> route 100 100 0
+to=0 focus=0 swallow=0 grab=0
+> route 100 100 1
+to=0 focus=1 swallow=1 grab=0

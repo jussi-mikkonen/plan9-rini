@@ -1,0 +1,27 @@
+# RECORDED fixture: kbdfs messages from drawterm on a Finnish keyboard under niri.
+# Super alone (1,2), Super+h and Super+1 swallowed by niri so Kmod4 only (3,5),
+# Super+Return bound chord (4), Super+Shift+1 unbound, k carries unshifted 1 (6).
+# Expectations in .kgolden are hand-written.
+mod Mod4
+defaults
+K
+k F868
+K
+k F868
+K
+k F868
+K
+k F868
+k F868 A
+c A
+K F868
+K
+k F868
+K
+k F868
+k F868 F016
+k F868 F016 31
+c 21
+K F868 F016
+K F868
+K

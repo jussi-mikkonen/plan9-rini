@@ -1,0 +1,668 @@
+> defaults
+> mod Mod4
+ok
+> list
+bind Mod+t once spawn
+bind Mod+Return once spawn
+bind Mod+q once delete
+bind Mod+h repeat focus-column-left
+bind Mod+Left repeat focus-column-left
+bind Mod+l repeat focus-column-right
+bind Mod+Right repeat focus-column-right
+bind Mod+Home once focus-column-first
+bind Mod+End once focus-column-last
+bind Mod+r once switch-preset-column-width
+bind Mod+Shift+r once switch-preset-column-width-back
+bind Mod+minus repeat set-column-width -10%
+bind Mod+plus repeat set-column-width +10%
+bind Mod+equal repeat set-column-width +10%
+bind Mod+n repeat set-column-width -10%
+bind Mod+w repeat set-column-width +10%
+bind Mod+c once center-column
+bind Mod+Shift+e once quit
+bind Mod+F1 once show-hotkey-overlay
+bind Mod+j repeat focus-window-or-workspace-down
+bind Mod+Down repeat focus-window-or-workspace-down
+bind Mod+k repeat focus-window-or-workspace-up
+bind Mod+Up repeat focus-window-or-workspace-up
+bind Mod+Ctrl+h repeat move-column-left
+bind Mod+Ctrl+Left repeat move-column-left
+bind Mod+Ctrl+l repeat move-column-right
+bind Mod+Ctrl+Right repeat move-column-right
+bind Mod+Ctrl+j repeat move-window-down-or-to-workspace-down
+bind Mod+Ctrl+Down repeat move-window-down-or-to-workspace-down
+bind Mod+Ctrl+k repeat move-window-up-or-to-workspace-up
+bind Mod+Ctrl+Up repeat move-window-up-or-to-workspace-up
+bind Mod+comma once consume-window-into-column
+bind Mod+period once expel-window-from-column
+bind Mod+u once focus-workspace-down
+bind Mod+Next once focus-workspace-down
+bind Mod+i once focus-workspace-up
+bind Mod+Prior once focus-workspace-up
+bind Mod+Ctrl+u once move-column-to-workspace-down
+bind Mod+Ctrl+Next once move-column-to-workspace-down
+bind Mod+Ctrl+i once move-column-to-workspace-up
+bind Mod+Ctrl+Prior once move-column-to-workspace-up
+bind Mod+1 once focus-workspace 1
+bind Mod+2 once focus-workspace 2
+bind Mod+3 once focus-workspace 3
+bind Mod+4 once focus-workspace 4
+bind Mod+5 once focus-workspace 5
+bind Mod+6 once focus-workspace 6
+bind Mod+7 once focus-workspace 7
+bind Mod+8 once focus-workspace 8
+bind Mod+9 once focus-workspace 9
+bind Mod+Ctrl+1 once move-column-to-workspace 1
+bind Mod+Ctrl+2 once move-column-to-workspace 2
+bind Mod+Ctrl+3 once move-column-to-workspace 3
+bind Mod+Ctrl+4 once move-column-to-workspace 4
+bind Mod+Ctrl+5 once move-column-to-workspace 5
+bind Mod+Ctrl+6 once move-column-to-workspace 6
+bind Mod+Ctrl+7 once move-column-to-workspace 7
+bind Mod+Ctrl+8 once move-column-to-workspace 8
+bind Mod+Ctrl+9 once move-column-to-workspace 9
+bind Mod+v once toggle-window-floating
+bind Mod+Shift+v once switch-focus-between-floating-and-tiling
+bind Mod+f once maximize-column
+bind Mod+Shift+f once fullscreen-window
+bind Mod+Ctrl+r once switch-preset-window-height
+bind Mod+Ctrl+Shift+r once reset-window-height
+bind Mod+Shift+minus repeat set-window-height -10%
+bind Mod+Shift+plus repeat set-window-height +10%
+bind Mod+Shift+equal repeat set-window-height +10%
+> k F868
+fwd k F868
+> k F868 6A
+act focus-window-or-workspace-down
+> c 6A
+> K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 6B
+act focus-window-or-workspace-up
+> c 6B
+> K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 F800
+act focus-window-or-workspace-down
+> c F800
+> K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 F00E
+act focus-window-or-workspace-up
+> c F00E
+> K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 F017
+fwd k F868 F017
+> k F868 F017 8
+act move-column-left
+> c 8
+> K F868 F017
+> K F868
+fwd K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 F017
+fwd k F868 F017
+> k F868 F017 C
+act move-column-right
+> c C
+> K F868 F017
+> K F868
+fwd K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 F017
+fwd k F868 F017
+> k F868 F017 A
+act move-window-down-or-to-workspace-down
+> c A
+> K F868 F017
+> K F868
+fwd K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 F017
+fwd k F868 F017
+> k F868 F017 B
+act move-window-up-or-to-workspace-up
+> c B
+> K F868 F017
+> K F868
+fwd K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 F017
+fwd k F868 F017
+> k F868 F017 F011
+act move-column-left
+> c F011
+> K F868 F017
+> K F868
+fwd K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 F017
+fwd k F868 F017
+> k F868 F017 F012
+act move-column-right
+> c F012
+> K F868 F017
+> K F868
+fwd K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 F017
+fwd k F868 F017
+> k F868 F017 F800
+act move-window-down-or-to-workspace-down
+> c F800
+> K F868 F017
+> K F868
+fwd K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 F017
+fwd k F868 F017
+> k F868 F017 F00E
+act move-window-up-or-to-workspace-up
+> c F00E
+> K F868 F017
+> K F868
+fwd K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 2C
+act consume-window-into-column
+> c 2C
+> K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 2E
+act expel-window-from-column
+> c 2E
+> K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 75
+act focus-workspace-down
+> c 75
+> K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 69
+act focus-workspace-up
+> c 69
+> K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 F013
+act focus-workspace-down
+> c F013
+> K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 F00F
+act focus-workspace-up
+> c F00F
+> K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 F017
+fwd k F868 F017
+> k F868 F017 15
+act move-column-to-workspace-down
+> c 15
+> K F868 F017
+> K F868
+fwd K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 F017
+fwd k F868 F017
+> k F868 F017 9
+act move-column-to-workspace-up
+> c 9
+> K F868 F017
+> K F868
+fwd K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 F017
+fwd k F868 F017
+> k F868 F017 F013
+act move-column-to-workspace-down
+> c F013
+> K F868 F017
+> K F868
+fwd K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 F017
+fwd k F868 F017
+> k F868 F017 F00F
+act move-column-to-workspace-up
+> c F00F
+> K F868 F017
+> K F868
+fwd K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 31
+act focus-workspace 1
+> c 31
+> K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 32
+act focus-workspace 2
+> c 32
+> K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 33
+act focus-workspace 3
+> c 33
+> K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 34
+act focus-workspace 4
+> c 34
+> K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 35
+act focus-workspace 5
+> c 35
+> K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 36
+act focus-workspace 6
+> c 36
+> K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 37
+act focus-workspace 7
+> c 37
+> K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 38
+act focus-workspace 8
+> c 38
+> K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 39
+act focus-workspace 9
+> c 39
+> K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 F017
+fwd k F868 F017
+> k F868 F017 31
+act move-column-to-workspace 1
+> c 31
+> K F868 F017
+> K F868
+fwd K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 F017
+fwd k F868 F017
+> k F868 F017 32
+act move-column-to-workspace 2
+> c 32
+> K F868 F017
+> K F868
+fwd K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 F017
+fwd k F868 F017
+> k F868 F017 33
+act move-column-to-workspace 3
+> c 33
+> K F868 F017
+> K F868
+fwd K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 F017
+fwd k F868 F017
+> k F868 F017 34
+act move-column-to-workspace 4
+> c 34
+> K F868 F017
+> K F868
+fwd K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 F017
+fwd k F868 F017
+> k F868 F017 35
+act move-column-to-workspace 5
+> c 35
+> K F868 F017
+> K F868
+fwd K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 F017
+fwd k F868 F017
+> k F868 F017 36
+act move-column-to-workspace 6
+> c 36
+> K F868 F017
+> K F868
+fwd K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 F017
+fwd k F868 F017
+> k F868 F017 37
+act move-column-to-workspace 7
+> c 37
+> K F868 F017
+> K F868
+fwd K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 F017
+fwd k F868 F017
+> k F868 F017 38
+act move-column-to-workspace 8
+> c 38
+> K F868 F017
+> K F868
+fwd K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 F017
+fwd k F868 F017
+> k F868 F017 39
+act move-column-to-workspace 9
+> c 39
+> K F868 F017
+> K F868
+fwd K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 76
+act toggle-window-floating
+> c 76
+> K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 F016
+fwd k F868 F016
+> k F868 F016 76
+act switch-focus-between-floating-and-tiling
+> c 56
+> K F868 F016
+> K F868
+fwd K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 66
+act maximize-column
+> c 66
+> K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 F016
+fwd k F868 F016
+> k F868 F016 66
+act fullscreen-window
+> c 46
+> K F868 F016
+> K F868
+fwd K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 F017
+fwd k F868 F017
+> k F868 F017 12
+act switch-preset-window-height
+> c 12
+> K F868 F017
+> K F868
+fwd K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 F017
+fwd k F868 F017
+> k F868 F017 F016
+fwd k F868 F017 F016
+> k F868 F017 F016 12
+act reset-window-height
+> c 12
+> K F868 F017 F016
+> K F868 F017
+fwd K F868 F017
+> K F868
+fwd K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 F016
+fwd k F868 F016
+> k F868 F016 2D
+act set-window-height -10%
+> c 5F
+> K F868 F016
+> K F868
+fwd K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 F016
+fwd k F868 F016
+> k F868 F016 2B
+act set-window-height +10%
+> c 2B
+> K F868 F016
+> K F868
+fwd K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 F016
+fwd k F868 F016
+> k F868 F016 3D
+act set-window-height +10%
+> c 2B
+> K F868 F016
+> K F868
+fwd K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 74
+act spawn
+> c 74
+> K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 71
+act delete
+> c 71
+> K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 68
+act focus-column-left
+> c 68
+> K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 6C
+act focus-column-right
+> c 6C
+> K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 63
+act center-column
+> c 63
+> K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 F016
+fwd k F868 F016
+> k F868 F016 65
+act quit
+> c 45
+> K F868 F016
+> K F868
+fwd K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 F00D
+act focus-column-first
+> c F00D
+> K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 F016
+fwd k F868 F016
+> k F868 F016 31
+fwd k F868 F016 31
+> c 21
+fwd c 21
+> K F868 F016
+fwd K F868 F016
+> K F868
+fwd K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 F017
+fwd k F868 F017
+> k F868 F017 30
+fwd k F868 F017 30
+> c 30
+fwd c 30
+> K F868 F017
+fwd K F868 F017
+> K F868
+fwd K F868
+> K
+fwd K

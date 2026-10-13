@@ -1,0 +1,7 @@
+# hex 0a and 09 in a label become spaces: one line, no forged verb
+snap 1 1 1
+winhex 1 1 tile 500 61620a666f6375732039390963
+commit
+reader
+drain 0
+state

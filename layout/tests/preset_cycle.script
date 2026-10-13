@@ -1,0 +1,16 @@
+add
+dump
+switch-preset-column-width
+dump
+switch-preset-column-width
+dump
+switch-preset-column-width
+dump
+switch-preset-column-width-back
+dump
+set-column-width 40%
+switch-preset-column-width
+dump
+set-column-width 40%
+switch-preset-column-width-back
+dump

@@ -1,0 +1,24 @@
+# The cooked rune belongs to the last pressed key (kbdfs sends c right after
+# the k that adds the key and repeats only that key), whatever the rune: an
+# a still held does not make Mod+Shift+minus's underscore leak.
+defaults
+k 61
+c 61
+k 61 F868
+k 61 F868 F016
+k 61 F868 F016 2D
+c 5F
+c 5F
+K F868 F016 2D
+K F016 2D
+K
+# a pressed while the chord key is held: its c is forwarded
+k F868
+k F868 68
+c 68
+k F868 68 61
+c 61
+c 61
+K F868 68
+K F868
+K

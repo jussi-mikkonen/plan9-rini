@@ -1,0 +1,26 @@
+# SYNTHETIC (hand-made). In leader mode Mod is symbolic: it must not
+# resolve through the previous mask (Mod4 by default), so explicit Mod4 bindings do
+# not alias the leader and a real Super after the leader does not match Mod chords.
+mod leader F12
+defaults
+bind Mod4+x once explicit-mod4
+# leader then x: Mod4+x is not a leader chord, x is forwarded
+k F00C
+K
+k 78
+c 78
+K
+# leader then h: Mod+h
+k F00C
+K
+k 68
+c 68
+K
+# leader then a real Super+h: not Mod+h, forwarded
+k F00C
+K
+k F868
+k F868 68
+c 68
+K F868
+K

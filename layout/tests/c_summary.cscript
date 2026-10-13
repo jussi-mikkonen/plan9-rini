@@ -1,0 +1,4 @@
+# the ctl read text: six key value lines
+summary Mod4 never 1 0x777777FF 12 2
+summary Ctrl+Alt always 0 0x224466ff 0 1
+summary Mod4 never

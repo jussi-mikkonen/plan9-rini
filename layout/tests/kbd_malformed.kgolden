@@ -1,0 +1,23 @@
+> defaults
+> x 6B FF FE
+drop malformed
+> long 200
+drop malformed
+> long 20
+fwd k 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61
+> x 63
+drop malformed
+> x 71 68
+drop malformed
+> x 6B C0 80
+drop malformed
+> x 6B ED A0 80
+drop malformed
+> x 6B F4 90 80 80
+drop malformed
+> x 6B 00
+fwd k
+> k F868
+fwd k F868
+> k F868 74
+act spawn

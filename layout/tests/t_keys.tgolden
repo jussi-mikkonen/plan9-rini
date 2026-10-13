@@ -1,0 +1,280 @@
+> k init
+> k defaults
+> k dump
+c64=1 n=23
+0 F011 left
+0 F012 right
+0 F00E up
+0 F800 down
+1 F00E scroll-line-up
+1 F800 scroll-line-down
+0 F00F page-up
+0 F013 page-down
+0 F00D top
+0 F018 end
+0 15 kill-line
+0 17 kill-word
+0 8 backspace
+0 1 line-start
+0 5 line-end
+0 2 output-point
+0 1B hold
+0 A return
+1 A newline
+0 7F interrupt
+0 6 complete
+0 F014 complete
+0 9 tab
+> k look 0 F011
+act=left
+> k look 0 F00E
+act=up
+> k look 1 F00E
+act=scroll-line-up
+> k look 1 F800
+act=scroll-line-down
+> k look 0 F00F
+act=page-up
+> k look 0 F013
+act=page-down
+> k look 0 F00D
+act=top
+> k look 0 F018
+act=end
+> k look 1 A
+act=newline
+> k look 0 A
+act=return
+> k look 0 15
+act=kill-line
+> k look 0 17
+act=kill-word
+> k look 0 8
+act=backspace
+> k look 0 1
+act=line-start
+> k look 0 5
+act=line-end
+> k look 0 2
+act=output-point
+> k look 0 1B
+act=hold
+> k look 0 A
+act=return
+> k look 0 7F
+act=interrupt
+> k look 0 6
+act=complete
+> k look 0 F014
+act=complete
+> k look 0 9
+act=tab
+> k look 0 61
+act=insert
+> k look 1 F011
+act=left
+> k look 1 41
+act=insert
+> k add Ctrl+u line-start
+> k look 0 15
+act=line-start
+> k dump
+c64=1 n=23
+0 F011 left
+0 F012 right
+0 F00E up
+0 F800 down
+1 F00E scroll-line-up
+1 F800 scroll-line-down
+0 F00F page-up
+0 F013 page-down
+0 F00D top
+0 F018 end
+0 15 line-start
+0 17 kill-word
+0 8 backspace
+0 1 line-start
+0 5 line-end
+0 2 output-point
+0 1B hold
+0 A return
+1 A newline
+0 7F interrupt
+0 6 complete
+0 F014 complete
+0 9 tab
+> k add Shift+Prior top
+> k look 1 F00F
+act=top
+> k look 0 F00F
+act=page-up
+> k add Ctrl+u frobnicate
+error unknown action: frobnicate
+> k add Mod+u left
+error bad terminal key: Mod+u
+> k add Alt+x left
+error bad terminal key: Alt+x
+> k add Ctrl+Left left
+error bad terminal key: Ctrl+Left
+> k add Nokey left
+error unknown key: Nokey
+> k c64 0
+> k dump
+c64=0 n=24
+0 F011 left
+0 F012 right
+0 F00E up
+0 F800 down
+1 F00E scroll-line-up
+1 F800 scroll-line-down
+0 F00F page-up
+0 F013 page-down
+0 F00D top
+0 F018 end
+0 15 line-start
+0 17 kill-word
+0 8 backspace
+0 1 line-start
+0 5 line-end
+0 2 output-point
+0 1B hold
+0 A return
+1 A newline
+0 7F interrupt
+0 6 complete
+0 F014 complete
+0 9 tab
+1 F00F top
+> k init
+> k add a insert
+> k add b insert
+> k add c insert
+> k add d insert
+> k add e insert
+> k add f insert
+> k add g insert
+> k add h insert
+> k add i insert
+> k add j insert
+> k add k insert
+> k add l insert
+> k add m insert
+> k add n insert
+> k add o insert
+> k add p insert
+> k add q insert
+> k add r insert
+> k add s insert
+> k add t insert
+> k add u insert
+> k add v insert
+> k add w insert
+> k add x insert
+> k add y insert
+> k add z insert
+> k add Shift+a insert
+> k add Shift+b insert
+> k add Shift+c insert
+> k add Shift+d insert
+> k add Shift+e insert
+> k add Shift+f insert
+> k add Shift+g insert
+> k add Shift+h insert
+> k add Shift+i insert
+> k add Shift+j insert
+> k add Shift+k insert
+> k add Shift+l insert
+> k add Shift+m insert
+> k add Shift+n insert
+> k add Shift+o insert
+> k add Shift+p insert
+> k add Shift+q insert
+> k add Shift+r insert
+> k add Shift+s insert
+> k add Shift+t insert
+> k add Shift+u insert
+> k add Shift+v insert
+> k add Shift+w insert
+> k add Shift+x insert
+> k add Shift+y insert
+> k add Shift+z insert
+> k add 0 insert
+> k add 1 insert
+> k add 2 insert
+> k add 3 insert
+> k add 4 insert
+> k add 5 insert
+> k add 6 insert
+> k add 7 insert
+> k add 8 insert
+> k add 9 insert
+> k add Ctrl+a insert
+> k add Ctrl+b insert
+> k add Ctrl+c insert
+error too many terminal keys
+> k dump
+c64=1 n=64
+0 61 insert
+0 62 insert
+0 63 insert
+0 64 insert
+0 65 insert
+0 66 insert
+0 67 insert
+0 68 insert
+0 69 insert
+0 6A insert
+0 6B insert
+0 6C insert
+0 6D insert
+0 6E insert
+0 6F insert
+0 70 insert
+0 71 insert
+0 72 insert
+0 73 insert
+0 74 insert
+0 75 insert
+0 76 insert
+0 77 insert
+0 78 insert
+0 79 insert
+0 7A insert
+1 41 insert
+1 42 insert
+1 43 insert
+1 44 insert
+1 45 insert
+1 46 insert
+1 47 insert
+1 48 insert
+1 49 insert
+1 4A insert
+1 4B insert
+1 4C insert
+1 4D insert
+1 4E insert
+1 4F insert
+1 50 insert
+1 51 insert
+1 52 insert
+1 53 insert
+1 54 insert
+1 55 insert
+1 56 insert
+1 57 insert
+1 58 insert
+1 59 insert
+1 5A insert
+0 30 insert
+0 31 insert
+0 32 insert
+0 33 insert
+0 34 insert
+0 35 insert
+0 36 insert
+0 37 insert
+0 38 insert
+0 39 insert
+0 1 insert
+0 2 insert

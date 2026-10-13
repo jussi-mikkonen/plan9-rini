@@ -1,0 +1,55 @@
+> mod Ctrl+Alt
+ok
+> defaults
+> bind Mod+] once bracket-right
+ok
+> bind Mod+_ once underscore
+ok
+> k F015
+fwd k F015
+> k F015 F017
+fwd k F015 F017
+> k F015 F017 1D
+act bracket-right
+> c 1D
+> K F015 F017
+> K
+fwd K
+> k F015
+fwd k F015
+> k F015 F017
+fwd k F015 F017
+> k F015 F017 1F
+act underscore
+> c 1F
+> K F015 F017
+> K
+fwd K
+> k F015
+fwd k F015
+> k F015 F017
+fwd k F015 F017
+> k F015 F017 0
+> K F015 F017
+> K
+fwd K
+> k F015
+fwd k F015
+> k F015 F017
+fwd k F015 F017
+> k F015 F017 E
+act set-column-width -10%
+> c E
+> K F015 F017
+> K
+fwd K
+> k F015
+fwd k F015
+> k F015 F017
+fwd k F015 F017
+> k F015 F017 17
+act set-column-width +10%
+> c 17
+> K F015 F017
+> K
+fwd K

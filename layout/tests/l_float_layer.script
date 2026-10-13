@@ -1,0 +1,48 @@
+# layer switch, float cycle, floats stay with their workspace
+size 1000 600
+switch-focus-between-floating-and-tiling
+add
+add
+add
+switch-focus-between-floating-and-tiling
+dumpall
+who
+toggle-window-floating
+focusid 2
+toggle-window-floating
+dumpall
+who
+switch-focus-between-floating-and-tiling
+dumpall
+who
+switch-focus-between-floating-and-tiling
+dumpall
+who
+focus-column-right
+dumpall
+who
+focus-column-left
+focus-column-left
+dumpall
+who
+focus-window-or-workspace-down
+dumpall
+who
+focus-window-or-workspace-up
+dumpall
+who
+set-column-width 30%
+maximize-column
+dumpall
+who
+focus-workspace-down
+add
+dumpall
+who
+focus-workspace-up
+dumpall
+who
+switch-focus-between-floating-and-tiling
+focus-column-right
+dumpall
+who

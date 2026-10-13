@@ -1,0 +1,14 @@
+> clear
+> place 1 0 0 1000 600 F
+> mpol 2 300 4 1000 0 0
+kind=Dpass id=1 dir=0 corner=0 dx=0 dy=0
+> mpol 2 300 0 1010 0 0
+kind=Dpass id=0 dir=0 corner=0 dx=0 dy=0
+> mpol 998 598 4 1020 0 0
+kind=Dpass id=1 dir=0 corner=0 dx=0 dy=0
+> mpol 998 598 0 1030 0 0
+kind=Dpass id=0 dir=0 corner=0 dx=0 dy=0
+> mpol 2 300 4 1040 1 0
+kind=Dmenu id=1 dir=0 corner=0 dx=0 dy=0
+> mpol 2 300 0 1050 1 0
+kind=Dswallow id=0 dir=0 corner=0 dx=0 dy=0

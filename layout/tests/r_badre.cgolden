@@ -1,0 +1,16 @@
+> ruleclear
+> rule '^ok$' float
+ok
+> rule '(' float
+error bad regexp:
+> rule 'a(b' float
+error bad regexp:
+> rules
+rule ^ok$ float
+> rule '^fine$' tile
+ok
+> match fine
+match fine: tile
+> rules
+rule ^ok$ float
+rule ^fine$ tile

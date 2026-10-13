@@ -1,0 +1,46 @@
+size 1000 600
+add
+add
+focusid 1
+consume-window-into-column
+# preset cycle from equal: 667, 333, 500
+switch-preset-window-height
+dump
+switch-preset-window-height
+dump
+switch-preset-window-height
+dump
+# reset restores equal heights for every window
+reset-window-height
+dump
+# relative and absolute percent
+set-window-height +10%
+dump
+set-window-height 50%
+dump
+set-window-height -10%
+dump
+# clamp: 99% is limited so the other window keeps its minimum
+set-window-height 99%
+dump
+set-window-height 1%
+dump
+# wctl style height in pixels
+heightpx 1 200
+dump
+heightpx 2 1000000
+dump
+# three windows
+reset-window-height
+add
+focusid 1
+consume-window-into-column
+switch-preset-window-height
+dump
+# lone window ignores all height actions
+add
+switch-preset-window-height
+set-window-height 30%
+reset-window-height
+heightpx 4 100
+dump

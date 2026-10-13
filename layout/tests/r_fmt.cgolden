@@ -1,0 +1,28 @@
+> ruleclear
+> rule '^(sudoku|mines)$' float
+ok
+> rule '^x$' width 1/3 workspace 2
+ok
+> rule 'two words' tile rect 0 0 100 50
+ok
+> rule '^p$' width 640
+ok
+> rules
+rule ^(sudoku|mines)$ float
+rule ^x$ width 1/3 workspace 2
+rule 'two words' tile rect 0 0 100 50
+rule ^p$ width 640
+> ruleclear
+> rule '^(sudoku|mines)$' float
+ok
+> rule '^x$' width 1/3 workspace 2
+ok
+> rule 'two words' tile rect 0 0 100 50
+ok
+> rule '^p$' width 640
+ok
+> rules
+rule ^(sudoku|mines)$ float
+rule ^x$ width 1/3 workspace 2
+rule 'two words' tile rect 0 0 100 50
+rule ^p$ width 640

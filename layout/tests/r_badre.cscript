@@ -1,0 +1,9 @@
+# a bad regexp is an error and leaves the table alone
+ruleclear
+rule '^ok$' float
+rule '(' float
+rule 'a(b' float
+rules
+rule '^fine$' tile
+match fine
+rules

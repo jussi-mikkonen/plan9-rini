@@ -1,0 +1,99 @@
+# output "; ls\nfoo\n; ", typed "date" and Return: the prompt is recorded
+t init 1000 500
+t out 3B 20 6C 73 A 66 6F 6F A 3B 20 
+t ins 11 64 61 74 65
+t key return
+t prompt
+t read 64
+t show
+# Return on an old line re-sends it without the "; " prompt
+t init 1000 500
+t out 3B 20 6C 73 A 66 6F 6F A 3B 20
+t key up
+t key up
+t show
+t key return
+t show
+t read 64
+# pending input is replaced, not appended
+t init 1000 500
+t out 3B 20 6C 73 A 66 6F 6F A 3B 20
+t ins 11 61 62 63
+t sel 2 2
+t key return
+t show
+t read 64
+# a line that does not start with a prompt is sent whole
+t init 1000 500
+t out 3B 20 6C 73 A 66 6F 6F A 3B 20
+t sel 6 6
+t key return
+t read 64
+# the recorded prompt is stripped first, then "; "
+t init 1000 500
+t out 25 20
+t ins 2 78
+t key return
+t prompt
+t read 64
+t out 3B 20 65 63 68 6F A 25 20
+t sel 6 6
+t key return
+t read 64
+t out 25 20 6C 73 A 25 20
+t sel 19 19
+t key return
+t read 64
+t show
+# C64 off: Return on an old line sends the pending input
+t init 1000 500
+t out 3B 20 6C 73 A 3B 20
+t ins 7 61 62 63
+t c64 0
+t sel 2 2
+t key return
+t show
+t read 64
+t c64 1
+# Return in the middle of pending input splits it at the cursor
+t init 1000 500
+t out 3B 20
+t ins 2 61 62 63 64
+t sel 4 4
+t key return
+t show
+t read 64
+# a selection in the pending input is replaced by the newline
+t init 1000 500
+t out 3B 20
+t ins 2 61 62 63 64
+t sel 3 5
+t key return
+t show
+t read 64
+# newline above qh with c64 on is a plain edit, nothing is sent
+t init 1000 500
+t c64 1
+t out 3B 20 6C 73 0A 66 6F 6F 0A 3B 20
+t sel 3 3
+t key newline
+t show
+t ready
+# newline above qh replaces the selection
+t init 1000 500
+t c64 1
+t out 3B 20 6C 73 0A 66 6F 6F 0A 3B 20
+t sel 2 4
+t key newline
+t show
+t ready
+# newline in the input area is typed text
+t init 1000 500
+t out 3B 20
+t ins 2 61 62 63 64
+t sel 4 4
+t key newline
+t show
+t ready
+t read 64
+t prompt

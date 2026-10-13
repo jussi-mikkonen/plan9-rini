@@ -1,0 +1,60 @@
+# rawon and rawoff are counted
+t init 1000 500
+t ctl rawon
+t ctl rawon
+t ctl rawoff
+t show
+t ctl rawoff
+t show
+t ctl rawoff
+t show
+# raw mode: runes are readable without a newline, DEL is data
+t init 1000 500
+t ctl rawon
+t ready
+t raw 61 62
+t ready
+t read 64
+t raw 7F 4 A
+t read 64
+t ready
+t ctl rawoff
+# pending cooked text is read before the raw queue
+t init 1000 500
+t ins 0 78 79
+t ctl rawon
+t raw 61
+t read 64
+t ctl rawoff
+# queued raw runes become typed text when raw mode ends
+t init 1000 500
+t ctl rawon
+t raw 61
+t ctl rawoff
+t show
+t ready
+t ins 1 A
+t read 64
+# the raw queue grows past 256 runes (a bulk paste or send is not cut), as rio waddraw
+t init 1000 500
+t ctl rawon
+t raw 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61
+t raw A
+t show
+t read 4096
+# reset clears both counts
+t init 1000 500
+t ctl rawon
+t ctl rawon
+t ctl holdon
+t ctl reset
+t show
+t ctl reset
+# they replay through the key handler: typed at the cursor, not appended
+t init 1000 500
+t ins 0 78 79
+t ctl rawon
+t raw 61 62
+t sel 1 1
+t ctl rawoff
+t show

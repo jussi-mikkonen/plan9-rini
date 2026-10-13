@@ -1,0 +1,15 @@
+# a column too short for MINHPX per window: a height change leaves the
+# weights alone instead of clamping to a negative share
+size 1000 600
+add
+add
+focus-column-left
+consume-window-into-column
+set-window-height 25%
+size 1000 100
+dump
+set-window-height 30%
+dump
+# back at full height the 25% split is still there
+size 1000 600
+dump

@@ -1,0 +1,13 @@
+> parse unbind Mod+h extra
+error unbind: want chord
+> parse unbind Mod+h  
+verb=unbind set=-
+arg[0]=[Mod+h]
+> parse termbind Ctrl+u kill-line junk
+error termbind: want key action
+> parse termbind Ctrl+u hold on
+error termbind: want key action
+> parse termbind Ctrl+u kill-line
+verb=termbind set=-
+arg[0]=[Ctrl+u]
+arg[1]=[kill-line]

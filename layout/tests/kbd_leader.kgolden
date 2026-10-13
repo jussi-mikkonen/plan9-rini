@@ -1,0 +1,35 @@
+> mod leader F12
+ok
+> defaults
+> k F00C
+> K
+> k 68
+act focus-column-left
+> c 68
+> K
+> k 68
+fwd k 68
+> c 68
+fwd c 68
+> K
+fwd K
+> k F00C
+> K
+> k F00C
+> K
+> k 68
+fwd k 68
+> K
+fwd K
+> k F00C
+> k F00C 68
+fwd k 68
+> c 68
+fwd c 68
+> K F00C
+fwd K
+> K
+> k 68
+fwd k 68
+> K
+fwd K

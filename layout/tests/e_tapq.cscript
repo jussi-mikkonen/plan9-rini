@@ -1,0 +1,81 @@
+# the origin of each read: a z<id> read sets it for the messages after it
+tapfocus 4
+tappush ka
+tapfocus 7
+tappush kb
+tapread
+tapfrom
+tapread
+tapread
+tapfrom
+tapread
+# full: the oldest superseded k makes room each time, so the c and the newest K stay at the end
+tapfocus 9
+tappush ka
+tappush ka
+tappush ka
+tappush ka
+tappush ka
+tappush ka
+tappush ka
+tappush ka
+tappush ka
+tappush ka
+tappush ka
+tappush ka
+tappush ka
+tappush ka
+tappush ka
+tappush ka
+tappush ka
+tappush ka
+tappush ka
+tappush ka
+tappush ka
+tappush ka
+tappush ka
+tappush ka
+tappush ka
+tappush ka
+tappush ka
+tappush ka
+tappush ka
+tappush ka
+tappush ka
+tappush cz
+tappush K
+tapread
+tapread
+tapread
+tapread
+tapread
+tapread
+tapread
+tapread
+tapread
+tapread
+tapread
+tapread
+tapread
+tapread
+tapread
+tapread
+tapread
+tapread
+tapread
+tapread
+tapread
+tapread
+tapread
+tapread
+tapread
+tapread
+tapread
+tapread
+tapread
+tapread
+tapread
+tapread
+tapread
+# a write-back of more messages than fit is refused, not cut
+tapsplit 636100636100636100636100636100636100636100636100636100

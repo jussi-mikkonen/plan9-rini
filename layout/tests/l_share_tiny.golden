@@ -1,0 +1,9 @@
+view 0 focus 1 n 1
+win 1 c 0 w 500 x 4 px 494 scr 4 4 498 25 full*
+win 2 c 0 w 500 x 4 px 494 scr 4 29 498 96 full
+view 0 focus 1 n 1
+win 1 c 0 w 500 x 4 px 494 scr 4 4 498 25 full*
+win 2 c 0 w 500 x 4 px 494 scr 4 29 498 96 full
+view 0 focus 1 n 1
+win 1 c 0 w 500 x 4 px 494 scr 4 4 498 150 full*
+win 2 c 0 w 500 x 4 px 494 scr 4 154 498 596 full

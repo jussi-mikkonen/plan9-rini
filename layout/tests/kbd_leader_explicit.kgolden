@@ -1,0 +1,31 @@
+> mod leader F12
+ok
+> defaults
+> bind Mod4+x once explicit-mod4
+error chord must include Mod: Mod4+x
+> k F00C
+> K
+> k 78
+fwd k 78
+> c 78
+fwd c 78
+> K
+fwd K
+> k F00C
+> K
+> k 68
+act focus-column-left
+> c 68
+> K
+> k F00C
+> K
+> k F868
+fwd k F868
+> k F868 68
+fwd k F868 68
+> c 68
+fwd c 68
+> K F868
+fwd K F868
+> K
+fwd K

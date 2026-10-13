@@ -1,0 +1,7 @@
+# the state file for the snapshot fixture
+snap 2 1 1
+win 1 1 tile 500 rc 12
+win 2 1 float 0 stats
+win 3 1 hid 0 acme
+commit
+state

@@ -1,0 +1,42 @@
+> mod Mod4
+ok
+> defaults
+> K
+> k F868
+fwd k F868
+> K
+fwd K
+> k F868
+fwd k F868
+> K
+fwd K
+> k F868
+fwd k F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 A
+act spawn
+> c A
+> K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 F016
+fwd k F868 F016
+> k F868 F016 31
+fwd k F868 F016 31
+> c 21
+fwd c 21
+> K F868 F016
+fwd K F868 F016
+> K F868
+fwd K F868
+> K
+fwd K

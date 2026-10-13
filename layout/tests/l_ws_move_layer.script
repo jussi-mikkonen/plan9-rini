@@ -1,0 +1,20 @@
+size 1000 600
+add
+focus-workspace-down
+add
+add
+toggle-window-floating
+# the float is focused when we leave ws 1
+focus-workspace-up
+# the moved column takes the focus over the float (focus follows)
+move-column-to-workspace-down
+who
+dumpall
+# the same for a single window: leave ws 0 with its float focused
+switch-focus-between-floating-and-tiling
+who
+focus-workspace-down
+add
+move-window-to-workspace-up
+who
+dumpall

@@ -1,0 +1,30 @@
+size 1000 600
+# stack [1 2 3 4], active 1 (top)
+add
+add
+add
+add
+focusid 1
+consume-window-into-column
+consume-window-into-column
+consume-window-into-column
+dump
+# close a middle window: focus moves to the window above
+focusid 3
+close
+dump
+# closeid of a non-active window keeps the active one focused
+closeid 4
+dump
+# closing a window above the active one shifts the active index only
+closeid 1
+dump
+# the top window closes: focus falls to the window below
+add
+focusid 2
+consume-window-into-column
+close
+dump
+# last window removes the column
+close
+dump

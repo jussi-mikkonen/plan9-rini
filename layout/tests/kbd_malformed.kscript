@@ -1,0 +1,15 @@
+defaults
+x 6B FF FE
+long 200
+# more than 16 keys: truncated to 16, not dropped
+long 20
+x 63
+x 71 68
+x 6B C0 80
+x 6B ED A0 80
+x 6B F4 90 80 80
+# a NUL rune in a k list is skipped, not dropped (ctl tables can yield NUL)
+x 6B 00
+# router still usable
+k F868
+k F868 74

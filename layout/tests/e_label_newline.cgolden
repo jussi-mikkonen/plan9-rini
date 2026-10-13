@@ -1,0 +1,19 @@
+> snap 1 1 1
+> winhex 1 1 tile 500 61620a666f6375732039390963
+> commit
+ev wsadd 1
+ev ws 1
+ev open 1 'ab focus 99 c'
+ev focus 1
+> reader
+reader 0
+> drain 0
+line [wsadd 1\n]
+line [ws 1\n]
+line [open 1 'ab focus 99 c'\n]
+line [focus 1\n]
+lines 4 overflow 0 last [focus 1\n]
+> state
+workspaces 1 current 1
+win 1 1 tile 500 'ab focus 99 c'
+focus 1

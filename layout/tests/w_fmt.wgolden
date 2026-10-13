@@ -1,0 +1,6 @@
+> fmt 10 20 300 400 current visible
+[         10          20         300         400     current     visible ] 72
+> fmt 0 0 1024 768 nowindow nowindow
+[          0           0        1024         768    nowindow    nowindow ] 72
+> fmt 1 2 3 4 notcurrent hidden
+[          1           2           3           4  notcurrent      hidden ] 72

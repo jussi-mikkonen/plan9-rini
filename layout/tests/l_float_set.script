@@ -1,0 +1,16 @@
+# exact float rects; non-floats and unknown ids are left alone
+size 1000 600
+add
+add
+toggle-window-floating
+float 2 10 20 310 220
+dumpall
+float 1 0 0 5 5
+float 9 0 0 5 5
+float 2 -50 -50 100 100
+dumpall
+float 2 900 500 1200 700
+dumpall
+float 2 1
+toggle-window-floating
+dumpall

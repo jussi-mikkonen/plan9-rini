@@ -1,0 +1,26 @@
+size 1000 600
+add
+add
+add
+focusid 1
+consume-window-into-column
+consume-window-into-column
+dump
+# focus-window-down within the stack, edge leaves it unchanged
+focus-window-down
+focus-window-down
+focus-window-down
+dump
+# move up swaps with the window above, heights travel with the windows
+set-window-height 50%
+move-window-up
+dump
+move-window-up
+move-window-up
+dump
+move-window-down
+dump
+focus-window-up
+focus-window-up
+focus-window-up
+dump

@@ -1,0 +1,15 @@
+size 1000 600
+gap 4
+center on-overflow
+add
+add
+add
+switch-preset-column-width
+focus-column-first
+focus-column-right
+focus-column-left
+dump
+# prevfocus was the consumed column: after the delete it must not name
+# the wide column that took its index, so the view only follows
+consume-window-into-column
+dump

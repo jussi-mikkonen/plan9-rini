@@ -1,0 +1,143 @@
+> mod Mod4
+ok
+> defaults
+> k F867
+fwd k F867
+> k F867 37
+fwd k F867 37
+> c 7B
+fwd c 7B
+> K F867
+fwd K F867
+> K
+fwd K
+> k F867
+fwd k F867
+> k F867 32
+fwd k F867 32
+> c 40
+fwd c 40
+> K F867
+fwd K F867
+> K
+fwd K
+> k F867
+fwd k F867
+> k F867 34
+fwd k F867 34
+> c 24
+fwd c 24
+> K F867
+fwd K F867
+> K
+fwd K
+> k F867
+fwd k F867
+> k F867 3C
+fwd k F867 3C
+> c 7C
+fwd c 7C
+> K F867
+fwd K F867
+> K
+fwd K
+> k F867
+fwd k F867
+> k F867 A8
+fwd k F867 A8
+> c 7E
+fwd c 7E
+> K F867
+fwd K F867
+> K
+fwd K
+> k F867
+fwd k F867
+> k F867 30
+fwd k F867 30
+> c 7D
+fwd c 7D
+> K F867
+fwd K F867
+> K
+fwd K
+> k F867
+fwd k F867
+> k F867 38
+fwd k F867 38
+> c 5B
+fwd c 5B
+> K F867
+fwd K F867
+> K
+fwd K
+> k F867
+fwd k F867
+> k F867 39
+fwd k F867 39
+> c 5D
+fwd c 5D
+> K F867
+fwd K F867
+> K
+fwd K
+> k F867
+fwd k F867
+> k F867 2B
+fwd k F867 2B
+> c 5C
+fwd c 5C
+> K F867
+fwd K F867
+> K
+fwd K
+> k F016
+fwd k F016
+> k F016 31
+fwd k F016 31
+> c 21
+fwd c 21
+> K F016
+fwd K F016
+> K
+fwd K
+> k E5
+fwd k E5
+> c E5
+fwd c E5
+> K
+fwd K
+> k E4
+fwd k E4
+> c E4
+fwd c E4
+> K
+fwd K
+> k F6
+fwd k F6
+> c F6
+fwd c F6
+> K
+fwd K
+> mod Ctrl+Alt
+ok
+> k F867
+fwd k F867
+> k F867 37
+fwd k F867 37
+> c 7B
+fwd c 7B
+> K F867
+fwd K F867
+> K
+fwd K
+> k F867
+fwd k F867
+> k F867 32
+fwd k F867 32
+> c 40
+fwd c 40
+> K F867
+fwd K F867
+> K
+fwd K

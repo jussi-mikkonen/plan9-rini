@@ -1,0 +1,38 @@
+size 1000 600
+# windows 1 2 on ws 1, focus on 1
+add
+add
+focus-column-left
+# a new window 3 opens right of the focus and takes it
+add
+dumpall
+# rule moves 3 to ws 2: cur stays, focus returns to 1, empty ws appears below
+wsmove 3 2
+dumpall
+wsof 3
+wsof 1
+# a second move to the same ws makes a column right of the target focus (3 stays focused there)
+wsmove 2 2
+dumpall
+# the move to the window's own ws is a no-op
+wsmove 2 2
+# out of range and unknown ids are no-ops
+wsmove 1 9
+wsmove 1 0
+wsmove 77 1
+wsof 77
+dumpall
+# hidden windows are no-ops
+hide 1
+wsof 1
+wsmove 1 2
+dumpall
+unhide 1
+# a float moves with its rect; 1 is floated and then sent to ws 2
+toggle-window-floating
+dumpall
+wsmove 1 2
+dumpall
+wsof 1
+# the current ws has no floats left so it is back on the tile layer
+who

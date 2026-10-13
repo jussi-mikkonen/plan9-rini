@@ -1,0 +1,22 @@
+# verb classification and field use per verb
+parse bind Mod+e spawn acme -f x
+parse bind Mod+h repeat focus-column-left
+parse bind Mod+j once focus-window-down
+parse   bind   Mod+k   repeat   spawn  a  b
+parse unbind Mod+e
+parse termbind Ctrl+u killline
+parse set c64return off
+parse set center always
+parse set mod Ctrl+Alt
+parse set mod leader F12
+parse set background 0x224466FF
+parse rule '^(sudoku|mines)$' float width 1/3
+parse rule 'a''b' float
+parse unrule '^x$'
+parse spawn
+parse spawn -dx 400 acme -f x
+parse focus-column-left
+parse quit
+parse delete
+parse nonsense-verb 3
+parse bindx foo

@@ -1,0 +1,71 @@
+> snap 1 1 0
+> commit
+ev wsadd 1
+ev ws 1
+> win 1 1 tile 500 rc
+> snap 1 1 1
+> commit
+ev open 1 rc
+ev focus 1
+> snap 2 1 1
+> win 4 2 tile 500 acme
+> commit
+ev wsadd 2
+ev open 4 acme
+ev move 4 2
+> snap 2 2 1
+> commit
+ev ws 2
+> snap 2 1 1
+> commit
+ev ws 1
+> win 1 1 float 0 rc
+> commit
+ev float 1
+> win 1 1 tile 500 rc
+> commit
+ev tile 1
+> win 1 1 hid 0 rc
+> commit
+ev hide 1
+> win 1 1 tile 500 rc
+> commit
+ev unhide 1
+> win 1 1 hid 0 rc
+> commit
+ev hide 1
+> snap 2 2 1
+> win 1 1 tile 500 rc
+> commit
+ev ws 2
+ev unhide 1
+ev move 1 1
+> snap 2 1 1
+> commit
+ev ws 1
+> win 1 1 tile 500 rc 12
+> commit
+ev label 1 'rc 12'
+> snap 3 1 1
+> win 5 3 tile 500 three
+> commit
+ev wsadd 3
+ev open 5 three
+ev move 5 3
+> snap 2 1 1
+> win 5 2 tile 500 three
+> commit
+ev wsdel 3
+ev move 5 2
+> snap 1 1 1
+> unwin 4
+> unwin 5
+> commit
+ev wsdel 2
+ev close 4
+ev close 5
+> unwin 1
+> snap 1 1 0
+> commit
+ev close 1
+ev focus 0

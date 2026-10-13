@@ -1,0 +1,103 @@
+> ruleclear
+> rule '^r1$' float
+ok
+> rule '^r2$' float
+ok
+> rule '^r3$' float
+ok
+> rule '^r4$' float
+ok
+> rule '^r5$' float
+ok
+> rule '^r6$' float
+ok
+> rule '^r7$' float
+ok
+> rule '^r8$' float
+ok
+> rule '^r9$' float
+ok
+> rule '^r10$' float
+ok
+> rule '^r11$' float
+ok
+> rule '^r12$' float
+ok
+> rule '^r13$' float
+ok
+> rule '^r14$' float
+ok
+> rule '^r15$' float
+ok
+> rule '^r16$' float
+ok
+> rule '^r17$' float
+ok
+> rule '^r18$' float
+ok
+> rule '^r19$' float
+ok
+> rule '^r20$' float
+ok
+> rule '^r21$' float
+ok
+> rule '^r22$' float
+ok
+> rule '^r23$' float
+ok
+> rule '^r24$' float
+ok
+> rule '^r25$' float
+ok
+> rule '^r26$' float
+ok
+> rule '^r27$' float
+ok
+> rule '^r28$' float
+ok
+> rule '^r29$' float
+ok
+> rule '^r30$' float
+ok
+> rule '^r31$' float
+ok
+> rule '^r32$' float
+ok
+> rule '^r33$' float
+error too many rules
+> rule '^r1$' tile
+ok
+> rules
+rule ^r1$ tile
+rule ^r2$ float
+rule ^r3$ float
+rule ^r4$ float
+rule ^r5$ float
+rule ^r6$ float
+rule ^r7$ float
+rule ^r8$ float
+rule ^r9$ float
+rule ^r10$ float
+rule ^r11$ float
+rule ^r12$ float
+rule ^r13$ float
+rule ^r14$ float
+rule ^r15$ float
+rule ^r16$ float
+rule ^r17$ float
+rule ^r18$ float
+rule ^r19$ float
+rule ^r20$ float
+rule ^r21$ float
+rule ^r22$ float
+rule ^r23$ float
+rule ^r24$ float
+rule ^r25$ float
+rule ^r26$ float
+rule ^r27$ float
+rule ^r28$ float
+rule ^r29$ float
+rule ^r30$ float
+rule ^r31$ float
+rule ^r32$ float
+> ruleclear

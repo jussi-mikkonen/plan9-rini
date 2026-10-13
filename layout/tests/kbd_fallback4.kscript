@@ -1,0 +1,72 @@
+# SYNTHETIC, hand-made, not recorded. Documents the Ctrl+Alt dev fallback;
+# behaviour only, the default table is not reordered.
+# Under Ctrl+Alt, Mod resolves to Ctrl+Alt, so Mod+Ctrl+x collapses onto Mod+x and the
+# first table match wins: the earlier plain-Mod row shadows the Mod+Ctrl row.
+mod Ctrl+Alt
+defaults
+# Ctrl+Alt+h: Mod+Ctrl+h (move-column-left) is shadowed by Mod+h
+k F015
+k F015 F017
+k F015 F017 8
+c 8
+K F015 F017
+K F015
+K
+# Ctrl+Alt+j = U+000A: reaches Mod+Return (spawn); Mod+Ctrl+j is not reached
+k F015
+k F015 F017
+k F015 F017 A
+c A
+K F015 F017
+K F015
+K
+# Ctrl+Alt+u: Mod+Ctrl+u (move-column-to-workspace-down) shadowed by Mod+u
+k F015
+k F015 F017
+k F015 F017 15
+c 15
+K F015 F017
+K F015
+K
+# Ctrl+Alt+1: Mod+Ctrl+1 (move-column-to-workspace 1) shadowed by Mod+1
+k F015
+k F015 F017
+k F015 F017 31
+c 31
+K F015 F017
+K F015
+K
+# Ctrl+Alt+r = U+0012: Mod+Ctrl+r (switch-preset-window-height) shadowed by Mod+r
+k F015
+k F015 F017
+k F015 F017 12
+c 12
+K F015 F017
+K F015
+K
+# Ctrl+Alt+comma: not shadowed, consume-window-into-column
+k F015
+k F015 F017
+k F015 F017 2C
+c 2C
+K F015 F017
+K F015
+K
+# Ctrl+Alt+v = U+0016: not shadowed, toggle-window-floating
+k F015
+k F015 F017
+k F015 F017 16
+c 16
+K F015 F017
+K F015
+K
+# Ctrl+Alt+Shift+f = U+0006: not shadowed, fullscreen-window
+k F015
+k F015 F017
+k F015 F017 F016
+k F015 F017 F016 6
+c 6
+K F015 F017 F016
+K F015 F017
+K F015
+K

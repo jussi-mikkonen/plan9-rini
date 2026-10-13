@@ -1,0 +1,30 @@
+# focusing raises, raise and lower reorder, lowering the top moves focus
+size 1000 600
+add
+add
+add
+add
+toggle-window-floating
+focusid 3
+toggle-window-floating
+focusid 2
+toggle-window-floating
+dumpall
+focusid 4
+dumpall
+who
+lower 2
+dumpall
+who
+raise 2
+dumpall
+raise 9
+lower 1
+switch-focus-between-floating-and-tiling
+who
+lower 2
+dumpall
+focusid 1
+raise 2
+dumpall
+who

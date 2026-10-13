@@ -1,0 +1,20 @@
+> attach
+attach none
+> attach none
+attach none
+> attach 7
+attach id=7
+> attach 0
+error unknown id in attach
+> attach abc
+error unknown id in attach
+> attach new
+attach new cmd=new
+> attach new -dx 300 -pid 9
+attach new cmd=new dx=300 pid=9
+> attach new stats
+error bad attach spec
+> attach ctl
+attach ctl
+> attach ctlx
+error unknown id in attach

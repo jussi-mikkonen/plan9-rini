@@ -1,0 +1,13 @@
+# the rules text round trips through ruleclear and re-entry
+ruleclear
+rule '^(sudoku|mines)$' float
+rule '^x$' width 1/3 workspace 2
+rule 'two words' tile rect 0 0 100 50
+rule '^p$' width 640
+rules
+ruleclear
+rule '^(sudoku|mines)$' float
+rule '^x$' width 1/3 workspace 2
+rule 'two words' tile rect 0 0 100 50
+rule '^p$' width 640
+rules

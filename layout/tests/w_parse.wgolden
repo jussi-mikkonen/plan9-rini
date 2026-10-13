@@ -1,0 +1,44 @@
+> wctl resize -dx 300
+cmd=resize dx=300
+> wctl resize -r 0 0 100 100 -dy 50
+cmd=resize r=0,0,100,100 dy=50
+> wctl move -minx +10 -miny -5 -maxx 40
+cmd=move minx=+10 miny=-5 maxx=40
+> wctl new -dx 400 -cd /tmp -pid 42 /rc/bin/window -x stats
+cmd=new dx=400 cd=/tmp pid=42 rest=/rc/bin/window -x stats
+> wctl new -hide -scroll
+cmd=new hide scroll
+> wctl set -pid 7
+cmd=set pid=7
+> wctl current
+cmd=current
+> wctl top
+cmd=top
+> wctl bottom
+cmd=bottom
+> wctl hide
+cmd=hide
+> wctl unhide
+cmd=unhide
+> wctl delete
+cmd=delete
+> wctl scroll
+cmd=scroll
+> wctl noscroll
+cmd=noscroll
+> wctl set -id 3 -noscroll
+cmd=set noscroll id=3
+> wctl frob
+error bad wctl command: frob
+> wctl resize -bogus 3
+error bad wctl parameter: -bogus
+> wctl resize -dx
+error bad argument: -dx
+> wctl resize -dx abc
+error bad argument: abc
+> wctl resize -dx 2000000
+error bad argument: 2000000
+> wctl resize extra
+error bad wctl parameter: extra
+> wctl resize -r 1 2 3
+error bad argument: -r

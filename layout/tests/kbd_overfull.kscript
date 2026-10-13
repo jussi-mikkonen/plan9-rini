@@ -1,0 +1,13 @@
+# SYNTHETIC (hand-made). A k list with more than MAXHELD (16) runes is truncated,
+# keeping the modifiers, instead of dropping the whole message.
+defaults
+# 16 letters then Kshift: the last letter is dropped, Kshift kept
+k 61 62 63 64 65 66 67 68 69 6A 6B 6C 6D 6E 6F 70 F016
+# the release reflects the truncated list, so state stays in sync
+K F016
+K
+# the router still works afterwards
+k F868
+k F868 74
+K F868
+K

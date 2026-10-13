@@ -1,0 +1,42 @@
+desk cur 0 nws 2 nwin 4
+place 1 t full scr 4 4 498 596
+place 4 f full scr 253 4 747 596
+place 3 f full scr 253 4 747 596
+place 2 f full scr 253 4 747 596 *
+hidden
+desk cur 0 nws 2 nwin 4
+place 1 t full scr 4 4 498 596
+place 3 f full scr 253 4 747 596
+place 2 f full scr 253 4 747 596
+place 4 f full scr 253 4 747 596 *
+hidden
+focused 4 layer float
+desk cur 0 nws 2 nwin 4
+place 1 t full scr 4 4 498 596
+place 2 f full scr 253 4 747 596
+place 3 f full scr 253 4 747 596
+place 4 f full scr 253 4 747 596 *
+hidden
+focused 4 layer float
+desk cur 0 nws 2 nwin 4
+place 1 t full scr 4 4 498 596
+place 3 f full scr 253 4 747 596
+place 4 f full scr 253 4 747 596
+place 2 f full scr 253 4 747 596 *
+hidden
+error no such id: 9
+error no such id: 1
+focused 1 layer tile
+desk cur 0 nws 2 nwin 4
+place 1 t full scr 4 4 498 596 *
+place 2 f full scr 253 4 747 596
+place 3 f full scr 253 4 747 596
+place 4 f full scr 253 4 747 596
+hidden
+desk cur 0 nws 2 nwin 4
+place 1 t full scr 4 4 498 596 *
+place 3 f full scr 253 4 747 596
+place 4 f full scr 253 4 747 596
+place 2 f full scr 253 4 747 596
+hidden
+focused 1 layer tile

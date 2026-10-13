@@ -1,0 +1,12 @@
+# A NUL in an otherwise identical k list is not a repeat tick, and a held
+# repeat chord stops when the modifier is released (the key stays swallowed).
+defaults
+k F868
+k F868 6C
+k F868 6C 0
+c 6C
+c 6C
+K 6C
+c 6C
+k 6C
+K

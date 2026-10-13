@@ -1,0 +1,40 @@
+# SYNTHETIC (hand-made, NOT recorded): Ctrl+Alt fallback with punctuation keys.
+# The exact runes kbdfs sends for Ctrl+Alt+minus / plus on a Finnish layout are
+# NOT recorded. Punctuation chords under Ctrl+Alt are best-effort.
+mod Ctrl+Alt
+defaults
+bind Mod+] once bracket-right
+bind Mod+_ once underscore
+# Ctrl turns ']' into U+001D: matched as ']' (standard ASCII control mapping)
+k F015
+k F015 F017
+k F015 F017 1D
+c 1D
+K F015 F017
+K
+# Ctrl turns '_' (US '-' key, shifted) into U+001F: matched as '_'
+k F015
+k F015 F017
+k F015 F017 1F
+c 1F
+K F015 F017
+K
+# a NUL from a ctl table is skipped, not a malformed message; held state stays in sync
+k F015
+k F015 F017
+k F015 F017 0
+K F015 F017
+K
+# layout-independent width chords for the fallback: Mod+n narrower, Mod+w wider
+k F015
+k F015 F017
+k F015 F017 E
+c E
+K F015 F017
+K
+k F015
+k F015 F017
+k F015 F017 17
+c 17
+K F015 F017
+K

@@ -1,0 +1,41 @@
+> snap 1 1 7
+> win 7 1 tile 500 ab
+> commit
+ev wsadd 1
+ev ws 1
+ev open 7 ab
+ev focus 7
+> reader
+reader 0
+> read 0 1
+read 1 [w]
+> read 0 1
+read 1 [s]
+> read 0 1
+read 1 [a]
+> read 0 1
+read 1 [d]
+> read 0 1
+read 1 [d]
+> read 0 1
+read 1 [ ]
+> read 0 1
+read 1 [1]
+> read 0 1
+read 1 [\n]
+> read 0 1
+read 1 [w]
+> read 0 1
+read 1 [s]
+> read 0 4
+read 3 [ 1\n]
+> read 0 4096
+read 10 [open 7 ab\n]
+> read 0 4096
+read 8 [focus 7\n]
+> read 0 4096
+read 0 []
+> read 0 4096
+read 0 []
+> read 0 4096
+read 0 []

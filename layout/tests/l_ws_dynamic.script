@@ -1,0 +1,13 @@
+# a fresh desk has one empty workspace
+size 1000 600
+dumpall
+# a window on the last workspace makes a new empty one appear below
+add
+dumpall
+# open the bottom workspace and add there: a third appears
+focus-workspace-down
+add
+dumpall
+# focus-workspace is 1-based; going back keeps both populated workspaces
+focus-workspace 1
+dumpall

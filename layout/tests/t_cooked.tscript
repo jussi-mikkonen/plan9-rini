@@ -1,0 +1,57 @@
+# prompt "; " then typed "ls": nothing readable until the newline
+t init 1000 500
+t out 3B 20
+t ins 2 6C 73
+t show
+t ready
+t read 64
+t ins 4 A
+t ready
+t read 64
+t show
+t ready
+# two lines typed at once
+t init 1000 500
+t ins 0 61 A 62 A
+t read 64
+t read 64
+t ready
+# one byte at a time
+t init 1000 500
+t ins 0 61 62 A
+t read 1
+t read 1
+t read 1
+# ^D ends a read and is consumed
+t init 1000 500
+t ins 0 61 62 63 4
+t ready
+t read 64
+t show
+# a lone ^D is EOF
+t ins 4 4
+t read 64
+t show
+# a full read leaves a following ^D behind it and skips it
+t init 1000 500
+t ins 0 61 62 4 63 A
+t read 2
+t read 64
+# output while input is pending lands before it
+t init 1000 500
+t ins 0 7A 7A
+t show
+t out 78 A
+t show
+t read 64
+t ins 4 A
+t read 64
+# deletes shift qh, q0, q1
+t init 1000 500
+t out 61 62 63 64
+t ins 4 65 66 67 68
+t sel 6 7
+t del 2 6
+t show
+t del 0 1
+t show

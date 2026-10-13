@@ -1,0 +1,21 @@
+size 1000 600
+add
+add
+focus-workspace-down
+add
+dumpall
+# the column goes up, right of the target's focused column; focus follows
+move-column-to-workspace-up
+dumpall
+# the source ws is empty and was left, so it is gone
+# move to a numbered workspace, the empty bottom one: a new empty ws appears
+move-column-to-workspace 2
+dumpall
+# out of range is a no-op
+move-column-to-workspace 9
+dumpall
+# move down from ws 0 to ws 1 right of its focused column
+focus-workspace 1
+move-column-to-workspace-down
+dumpall
+move-column-to-workspace x

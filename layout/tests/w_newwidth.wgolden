@@ -1,0 +1,26 @@
+> newwidth 0 0 1000 600 new -r 0 0 161 117
+newwidth 161
+> newwidth 0 0 1000 600 new -dx 400
+newwidth 400
+> newwidth 0 0 1000 600 new -minx 100 -maxx 700
+newwidth 600
+> newwidth 0 0 1000 600 new -miny 130
+newwidth 0
+> newwidth 0 0 1000 600 new
+newwidth 0
+> newwidth 0 0 1000 600 new -dx 5000000
+error bad argument: 5000000
+> newwidth 0 0 1000 600 new -dx 99999
+newwidth 1000
+> newwidth 0 0 1000 600 new -r 0 0 161 117 -pid 5 -cd /tmp
+newwidth 161
+> newwidth 0 0 1000 600 new -dx +100
+newwidth 700
+> newwidth 0 0 1000 600 new -dx -100
+newwidth 500
+> newwidth 0 0 1000 600 new -r 0 0 10 10
+newwidth 100
+> newwidth 200 100 1200 700 new -dx 300
+newwidth 300
+> newwidth 0 0 1000 600 new -hide -scroll
+newwidth 0

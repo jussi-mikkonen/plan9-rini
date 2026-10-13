@@ -1,0 +1,32 @@
+# Fallback modifier Ctrl+Alt (for hosts that swallow Super).
+# Part 1 RECORDED: Ctrl+Alt+h from drawterm.
+# k carries the control rune U+0008 (not h); the router normalises it for matching only.
+mod Ctrl+Alt
+defaults
+k F015
+k F015 F017
+k F015 F017 8
+c 8
+K F015 F017
+K F017
+K
+# Part 2 SYNTHETIC (hand-made, not recorded): Ctrl+Alt+l and Ctrl+Alt+Return use the
+# same shapes (l = U+000C, Return = U+000A), AltGr+7 passes untouched.
+k F015
+k F015 F017
+k F015 F017 C
+c C
+K F015 F017
+K
+k F015
+k F015 F017
+k F015 F017 A
+c A
+K F015 F017
+K
+# AltGr+7 gives { with no Ctrl or Alt chord: must forward unchanged
+k F867
+k F867 7B
+c 7B
+K F867
+K

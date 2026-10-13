@@ -1,0 +1,30 @@
+desk cur 0 nws 2 nwin 4
+place 1 t full scr 4 4 498 596
+place 3 t part scr 502 4 1494 596
+place 4 t off scr 1498 4 1992 596
+place 2 f full scr 253 4 747 596 *
+hidden
+desk cur 0 nws 2 nwin 4
+place 1 t off scr -494 4 0 596
+place 3 t full scr 4 4 996 596
+place 2 f full scr 253 4 747 596
+place 4 f full scr 253 4 747 596 *
+hidden
+desk cur 0 nws 2 nwin 4
+place 1 t off scr -992 4 -498 596
+place 3 t part scr -494 4 498 596
+place 4 t full scr 502 4 996 596 *
+place 2 f full scr 253 4 747 596
+hidden
+desk cur 0 nws 2 nwin 4
+place 1 t off scr -1490 4 -996 596
+place 3 t off scr -992 4 0 596
+place 4 t full scr 4 4 498 596
+place 2 t full scr 502 4 996 596 *
+hidden
+desk cur 0 nws 2 nwin 4
+place 1 t off scr -1490 4 -996 596
+place 3 t off scr -992 4 0 596
+place 4 t full scr 4 4 498 596
+place 2 f full scr 253 4 747 596 *
+hidden

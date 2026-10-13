@@ -1,0 +1,34 @@
+# SYNTHETIC (hand-made). A held repeat chord must not swallow or act on cooked runes
+# of other keys: only the swallowed key's own rune counts as a tick.
+defaults
+# hold Mod+l, type x: x is forwarded in k and c, no extra focus-column-right
+k F868
+k F868 6C
+c 6C
+k F868 6C 78
+c 78
+c 78
+K F868 6C
+c 6C
+K F868
+K
+# hold Mod+l, type Shift+x: X forwarded, no action
+k F868
+k F868 6C
+c 6C
+k F868 6C F016
+k F868 6C F016 78
+c 58
+K F868 6C F016
+K F868 6C
+K F868
+K
+# Mod+Shift+r: the shifted cooked R of the swallowed key is still swallowed
+k F868
+k F868 F016
+k F868 F016 72
+c 52
+c 52
+K F868 F016
+K F868
+K

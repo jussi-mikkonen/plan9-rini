@@ -1,0 +1,72 @@
+mod Mod4
+defaults
+k F867
+k F867 37
+c 7B
+K F867
+K
+k F867
+k F867 32
+c 40
+K F867
+K
+k F867
+k F867 34
+c 24
+K F867
+K
+k F867
+k F867 3C
+c 7C
+K F867
+K
+k F867
+k F867 A8
+c 7E
+K F867
+K
+k F867
+k F867 30
+c 7D
+K F867
+K
+k F867
+k F867 38
+c 5B
+K F867
+K
+k F867
+k F867 39
+c 5D
+K F867
+K
+k F867
+k F867 2B
+c 5C
+K F867
+K
+k F016
+k F016 31
+c 21
+K F016
+K
+k E5
+c E5
+K
+k E4
+c E4
+K
+k F6
+c F6
+K
+mod Ctrl+Alt
+k F867
+k F867 37
+c 7B
+K F867
+K
+k F867
+k F867 32
+c 40
+K F867
+K

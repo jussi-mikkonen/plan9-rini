@@ -1,0 +1,36 @@
+> defaults
+> k 61
+fwd k 61
+> c 61
+fwd c 61
+> k 61 F868
+fwd k 61 F868
+> k 61 F868 F016
+fwd k 61 F868 F016
+> k 61 F868 F016 2D
+act set-window-height -10%
+> c 5F
+> c 5F
+act set-window-height -10%
+> K F868 F016 2D
+fwd K F868 F016
+> K F016 2D
+fwd K F016
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 68
+act focus-column-left
+> c 68
+> k F868 68 61
+fwd k F868 61
+> c 61
+fwd c 61
+> c 61
+fwd c 61
+> K F868 68
+fwd K F868
+> K F868
+> K
+fwd K

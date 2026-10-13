@@ -1,0 +1,31 @@
+> defaults
+> k F868
+fwd k F868
+> k F868 2D
+act set-column-width -10%
+> c 2D
+> c 2D
+act set-column-width -10%
+> unbind Mod+t
+ok
+> c 2D
+act set-column-width -10%
+> K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 F011
+act focus-column-left
+> k F868 F011
+act focus-column-left
+> unbind Mod+Left
+ok
+> k F868 F011
+act focus-column-left
+> c F011
+> c F011
+act focus-column-left
+> K F868
+> K
+fwd K

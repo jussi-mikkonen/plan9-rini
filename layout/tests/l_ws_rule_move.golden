@@ -1,0 +1,40 @@
+desk cur 0 nws 2 nwin 3
+place 1 t full scr 4 4 498 596
+place 3 t full scr 502 4 996 596 *
+place 2 t off scr 1000 4 1494 596
+hidden
+desk cur 0 nws 3 nwin 3
+place 1 t full scr 4 4 498 596 *
+place 2 t full scr 502 4 996 596
+place 3 t parked scr 4 4 498 596
+hidden
+wsof 3 2
+wsof 1 1
+desk cur 0 nws 3 nwin 3
+place 1 t full scr 4 4 498 596 *
+place 3 t parked scr 4 4 498 596
+place 2 t parked scr 502 4 996 596
+hidden
+wsof 77 0
+desk cur 0 nws 3 nwin 3
+place 1 t full scr 4 4 498 596 *
+place 3 t parked scr 4 4 498 596
+place 2 t parked scr 502 4 996 596
+hidden
+wsof 1 0
+desk cur 0 nws 3 nwin 3
+place 3 t parked scr 4 4 498 596
+place 2 t parked scr 502 4 996 596
+hidden 1
+desk cur 0 nws 3 nwin 3
+place 1 f full scr 253 4 747 596 *
+place 3 t parked scr 4 4 498 596
+place 2 t parked scr 502 4 996 596
+hidden
+desk cur 0 nws 3 nwin 3
+place 3 t parked scr 4 4 498 596
+place 2 t parked scr 502 4 996 596
+place 1 f parked scr 253 4 747 596
+hidden
+wsof 1 2
+focused 0 layer tile

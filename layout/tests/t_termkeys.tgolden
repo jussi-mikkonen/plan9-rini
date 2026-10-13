@@ -1,0 +1,53 @@
+> k init
+> k defaults
+> k add Shift+a hold
+> k look 1 41
+act=hold
+> k look 0 61
+act=insert
+> k add Shift+1 hold
+error bad terminal key: Shift+1 (Shift with a layout-dependent key)
+> k add Shift+minus hold
+error bad terminal key: Shift+minus (Shift with a layout-dependent key)
+> k add Ctrl+@ hold
+error bad terminal key: Ctrl+@
+> k add Ctrl+j newline
+error bad terminal key: Ctrl+j (bind BackSpace, Tab, Return or Escape)
+> k add Ctrl+i tab
+error bad terminal key: Ctrl+i (bind BackSpace, Tab, Return or Escape)
+> k add Ctrl+[ hold
+error bad terminal key: Ctrl+[ (bind BackSpace, Tab, Return or Escape)
+> k add Ctrl+h backspace
+error bad terminal key: Ctrl+h (bind BackSpace, Tab, Return or Escape)
+> k add Ctrl+m newline
+> k look 0 A
+act=return
+> k look 0 D
+act=newline
+> k dump
+c64=1 n=25
+0 F011 left
+0 F012 right
+0 F00E up
+0 F800 down
+1 F00E scroll-line-up
+1 F800 scroll-line-down
+0 F00F page-up
+0 F013 page-down
+0 F00D top
+0 F018 end
+0 15 kill-line
+0 17 kill-word
+0 8 backspace
+0 1 line-start
+0 5 line-end
+0 2 output-point
+0 1B hold
+0 A return
+1 A newline
+0 7F interrupt
+0 6 complete
+0 F014 complete
+0 9 tab
+1 41 hold
+0 D newline

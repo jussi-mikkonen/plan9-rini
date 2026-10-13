@@ -1,0 +1,29 @@
+> defaults
+> k F868
+fwd k F868
+> k F868 74
+act spawn
+> c 74
+> c 74
+> c 74
+> c 74
+> k F868 74
+> K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 6C
+act focus-column-right
+> c 6C
+> c 6C
+act focus-column-right
+> c 6C
+act focus-column-right
+> c 6C
+act focus-column-right
+> k F868 6C
+act focus-column-right
+> K F868
+> K
+fwd K

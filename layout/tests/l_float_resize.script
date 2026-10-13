@@ -1,0 +1,19 @@
+# an outer resize clips floats to the view and shifts them back in
+size 1000 600
+add
+add
+toggle-window-floating
+float 2 600 300 900 500
+add
+focus-workspace-down
+add
+toggle-window-floating
+float 4 700 100 1000 600
+focus-workspace-up
+dumpall
+# float 2 is shifted inside; the parked float 4 is clipped and shifted too
+size 500 400
+dumpall
+# a float already inside is left alone
+size 1000 600
+dumpall

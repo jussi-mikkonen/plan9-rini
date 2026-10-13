@@ -1,0 +1,14 @@
+> mod leader F12
+ok
+> defaults
+> t 0
+> k F00C
+> K
+> t 2000
+> k F00C
+> K
+> t 2100
+> k 68
+act focus-column-left
+> c 68
+> K

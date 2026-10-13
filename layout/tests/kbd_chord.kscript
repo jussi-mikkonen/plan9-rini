@@ -1,0 +1,22 @@
+# chord swallow in all three message forms
+defaults
+mod Mod4
+k F868
+k F868 68
+c 68
+K F868
+K
+# unbound chord passes through
+k F868
+k F868 7A
+c 7A
+K F868
+K
+# Mod+Shift+r keeps the held list F868 F016
+k F868
+k F868 F016
+k F868 F016 72
+c 52
+K F868 F016
+K F868
+K

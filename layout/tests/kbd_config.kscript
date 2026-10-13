@@ -1,0 +1,22 @@
+# modifier validation
+mod Mod4
+mod Ctrl+Alt
+# Shift in the mask would shadow Mod+Shift chords
+mod Mod4+Shift
+mod Ctrl+Alt+Shift
+mod leader F12
+mod Alt
+mod AltGr
+mod Mod4+AltGr
+mod Shift
+mod Ctrl
+# bind validation
+bind Mod+h repeat focus-column-left
+bind Mod+Shift+r once switch-preset-column-width-back
+bind Mod+nosuchkey once x
+bind Mod+h sometimes x
+bind Mod+Shift once x
+bind Mod+h once focus-column-right
+# defaults
+defaults
+list

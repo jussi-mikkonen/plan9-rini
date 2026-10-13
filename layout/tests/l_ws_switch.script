@@ -1,0 +1,42 @@
+size 1000 600
+add
+add
+focus-workspace-down
+add
+focus-workspace-down
+add
+dumpall
+# beyond the count and zero are no-ops
+focus-workspace 9
+dumpall
+focus-workspace 0
+dumpall
+focus-workspace 1
+dumpall
+focus-workspace-up
+dumpall
+focus-workspace-down
+focus-workspace-down
+focus-workspace-down
+dumpall
+# bad argument
+focus-workspace x
+# or-workspace falls through only at the stack edge: ws 0 gets a two-window stack
+focus-workspace 1
+focus-column-left
+consume-window-into-column
+focus-window-or-workspace-up
+dumpall
+dump
+focus-window-or-workspace-down
+dumpall
+dump
+focus-window-or-workspace-down
+dumpall
+dump
+focus-window-or-workspace-up
+dumpall
+dump
+focus-window-or-workspace-up
+dumpall
+dump

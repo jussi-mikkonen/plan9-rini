@@ -1,0 +1,29 @@
+> snap 2 1 1
+> win 1 1 tile 500 rc 12
+> win 2 1 float 0 stats
+> win 3 1 hid 0 acme
+> commit
+ev wsadd 1
+ev wsadd 2
+ev ws 1
+ev open 1 'rc 12'
+ev open 2 stats
+ev float 2
+ev open 3 acme
+ev hide 3
+ev focus 1
+> reader
+reader 0
+> drain 0
+line [wsadd 1\n]
+line [wsadd 2\n]
+line [ws 1\n]
+line [open 1 'rc 12'\n]
+line [open 2 stats\n]
+line [float 2\n]
+line [open 3 acme\n]
+line [hide 3\n]
+line [focus 1\n]
+lines 9 overflow 0 last [focus 1\n]
+> read 0 4096
+read 0 []

@@ -1,0 +1,22 @@
+> snap 1 1 0
+> commit
+ev wsadd 1
+ev ws 1
+> reader
+reader 0
+> reader
+reader 1
+> evpush 0 3000 xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+> drain 0 3
+line [overflow\n]
+line [xxxxxxxxxxxxxxxxxxxxxxxxxxxx 2873\n]
+line [xxxxxxxxxxxxxxxxxxxxxxxxxxxx 2874\n]
+lines 128 overflow 1 last [xxxxxxxxxxxxxxxxxxxxxxxxxxxx 2999\n]
+> read 1 5
+read 5 [wsadd]
+> evpush 1 3000 xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+> drain 1 3
+line [ 1\n]
+line [overflow\n]
+line [xxxxxxxxxxxxxxxxxxxxxxxxxxxx 2874\n]
+lines 128 overflow 1 last [xxxxxxxxxxxxxxxxxxxxxxxxxxxx 2999\n]

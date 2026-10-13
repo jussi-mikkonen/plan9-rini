@@ -1,0 +1,549 @@
+.TH RINI 1
+.SH NAME
+rini \- scrolling-tiling window system
+.SH SYNOPSIS
+.B rini
+[
+.B -D
+] [
+.B -m
+.I modspec
+] [
+.B -c
+.B never\fR|\fPalways\fR|\fPon-overflow
+] [
+.B -s
+.I cmd
+] [
+.B -i
+.I file
+]
+.SH DESCRIPTION
+.I Rini
+is a window system in the style of the Linux compositor niri.
+Windows are columns on an endless horizontal strip;
+opening a window adds a column and never resizes the others,
+and the view scrolls to follow the focus.
+A column can hold several windows stacked vertically.
+There is a vertical list of workspaces, each with its own strip
+and its own floating layer.
+.PP
+Like
+.IR rio (1),
+.I rini
+serves each window its own
+.BR /dev/cons ,
+.BR /dev/mouse ,
+.BR /dev/winname
+and the rest (see
+.IR rio (4)),
+so ordinary programs run in it unchanged.
+New windows run
+.B rc -i
+in a text window much like
+.IR rio 's,
+with these differences:
+.IP \(bu
+Up and Down move the cursor by lines instead of scrolling;
+Shift+Up and Shift+Down scroll.
+End moves the cursor to the end of the input;
+Home scrolls to the top.
+.IP \(bu
+Return with the cursor in the output sends that line, less its prompt,
+as input (C64 Return; see
+.BR "set c64return" ).
+Shift+Return inserts a newline without sending.
+.IP \(bu
+Send in the button 2 menu does nothing when nothing is selected
+(rio sends the snarf buffer).
+.IP \(bu
+The keys can be rebound with
+.BR termbind .
+.PP
+.I Rini
+runs at the top level or nested inside
+.I rio
+or another
+.IR rini .
+.PP
+The options are
+.TF "-c mode"
+.TP
+.B -D
+Debug: trace keyboard input and every 9P message to standard error.
+The trace includes keystrokes, so do not type secrets while it runs.
+.TP
+.BI -m " modspec
+The modifier that starts a chord, written
+.B Mod
+in bindings.
+The default is
+.BR Mod4
+(the Super key).
+Modifiers combine with
+.BR + ,
+as in
+.B Ctrl+Alt
+or
+.BR Mod4+Ctrl ;
+.BR Shift ,
+.B AltGr
+and a bare
+.B Alt
+are refused.
+.BI leader " key
+makes
+.I key
+(for example
+.BR F12 )
+a leader: press it, then the chord's key.
+.TP
+.BI -c " mode
+When the focused column is centred:
+.B never
+(scroll just enough to show it),
+.B always
+or
+.BR on-overflow .
+.TP
+.BI -s " cmd
+Run
+.I cmd
+in new windows instead of
+.BR "rc -i" .
+.TP
+.BI -i " file
+Run
+.I file
+at startup with
+.IR rc (1)
+instead of opening one window.
+Without
+.BR -i ,
+.I rini
+runs
+.B $home/lib/rinistart
+if it exists.
+.PD
+.PP
+The startup script has no window of its own;
+its standard output and error are
+.IR rini 's.
+It configures
+.I rini
+through
+.B /mnt/rini/ctl
+and opens the first windows with
+.BR spawn .
+An unmodified
+.B riostart
+works too.
+.SS Keyboard
+Every chord is the modifier plus one key.
+To see the bindings, press
+.B Mod+F1
+for an overlay listing them all, or
+.BR "cat /mnt/rini/bindings" .
+.B Mod+Shift+e
+asks for a second press, then exits.
+Keys that are not part of a chord, AltGr symbols included,
+go to the focused window unchanged.
+.SS Mouse
+Button 3 on the background, a gap or a window's border opens a menu:
+.BR New ,
+.BR Resize ,
+.BR Move ,
+.BR Delete ,
+.BR Hide ,
+.BR Float/Tile ,
+then the hidden windows (selecting one brings it back).
+.B Mod
+plus button 3 opens the same menu on a tiled window;
+on a floating window, dragging resizes it from the nearest corner.
+.B Mod
+plus button 1 drags a floating window.
+.B Mod
+plus the wheel switches workspaces;
+.B Mod+Shift
+plus the wheel scrolls through the columns.
+.SS "Control files"
+.I Rini
+posts its server as
+.BI /srv/rini. user . pid
+and exports the name in
+.BR $wsys .
+Attaching with the spec
+.B ctl
+gives the control tree;
+.I rini
+mounts it on
+.B /mnt/rini
+in every window's namespace and in the startup script's.
+It holds
+.TF bindings
+.TP
+.B ctl
+Written, a list of commands, one per line (below).
+Several lines may go in one write;
+the first failing line stops the write and the error names it.
+Read, the current settings:
+.BR mod ,
+.BR center ,
+.BR c64return ,
+.BR background ,
+then
+.B focus
+(the focused window's id, 0 for none) and
+.B ws
+(the current workspace, from 1).
+.TP
+.B bindings
+The key bindings, as
+.B bind
+commands that can be written back to
+.BR ctl .
+.TP
+.B rules
+The window rules, as
+.B rule
+commands.
+.TP
+.B state
+A snapshot:
+.BI "workspaces " n " current " c\fR,
+then one line per window,
+.BI "win " "id ws kind width label\fR,"
+then
+.BI "focus " id\fR.
+.I Kind
+is
+.BR tile ,
+.B float
+or
+.BR hidden ;
+.I ws
+is 0 for a hidden window;
+.I width
+is a tiled column's width in thousandths of the screen, else 0.
+.TP
+.B event
+A stream of changes, one per line.
+A new reader first gets the current state as events.
+The events are
+.BI "open " "id label" \fR,
+.BI "close " id\fR,
+.BI "label " "id label" \fR,
+.BI "focus " id\fR,
+.BI "move " "id ws" \fR,
+.BI "float " id\fR,
+.BI "tile " id\fR,
+.BI "hide " id\fR,
+.BI "unhide " id\fR,
+.BI "ws " n\fR,
+.BI "wsadd " n
+and
+.BI "wsdel " n\fR.
+A reader that falls behind gets
+.B overflow
+and should reread
+.BR state .
+.PD
+.PP
+Labels in
+.BR state ,
+.B event
+and
+.B rules
+are quoted as in
+.IR rc (1)
+when they contain blanks or quotes.
+.SS "Control commands"
+Arguments are separated by blanks;
+.B rule
+and
+.B unrule
+take
+.IR rc -style
+quotes,
+.BR '...' ,
+with
+.B ''
+for a quote.
+.TF "termbind key action"
+.TP
+.BI "bind " chord " \fR[\fPonce\fR|\fPrepeat\fR]\fP " action
+Bind
+.I chord
+to
+.IR action .
+A chord is
+.B Mod
+plus optional
+.BR Ctrl ,
+.B Alt
+and
+.B Shift
+and a key, joined by
+.BR + :
+.BR Mod+t ,
+.BR Mod+Ctrl+Left .
+Keys are letters, digits,
+.BR minus ,
+.BR plus ,
+.BR equal ,
+.BR comma ,
+.BR period ,
+.BR space ,
+.BR Return ,
+.BR Tab ,
+.BR Escape ,
+.BR BackSpace ,
+.BR Delete ,
+.BR Left ,
+.BR Right ,
+.BR Up ,
+.BR Down ,
+.BR Home ,
+.BR End ,
+.BR Prior ,
+.BR Next ,
+.B Insert
+and
+.BR F1 \- F12 .
+.B repeat
+makes a held chord repeat; the default is
+.BR once .
+Binding a chord again replaces it.
+.TP
+.BI "unbind " chord
+Remove a binding.
+.TP
+.BI "set mod " modspec
+As
+.BR -m .
+.TP
+.BI "set center " mode
+As
+.BR -c .
+.TP
+.B "set c64return on\fR|\fPoff"
+With
+.B on
+(the default),
+Return with the cursor in a text window's output
+sends that line, less its prompt, as input,
+as on a Commodore 64.
+With
+.BR off ,
+it moves the cursor to the end of the input, as in
+.IR rio .
+.TP
+.BI "set background 0x" RRGGBBAA
+The background colour.
+.TP
+.BI "termbind " "key action"
+Bind a key in text windows.
+.I Key
+is
+.RB [ Ctrl+ ][ Shift+ ]\c
+.IR key .
+Actions:
+.BR insert ,
+.BR left ,
+.BR right ,
+.BR up ,
+.BR down ,
+.BR scroll-line-up ,
+.BR scroll-line-down ,
+.BR page-up ,
+.BR page-down ,
+.BR top ,
+.BR end ,
+.BR kill-line ,
+.BR kill-word ,
+.BR backspace ,
+.BR line-start ,
+.BR line-end ,
+.BR output-point ,
+.BR hold ,
+.BR return ,
+.BR newline ,
+.BR interrupt ,
+.BR complete ,
+.BR tab .
+.TP
+.BI "rule '" regexp "' " props
+Apply
+.I props
+to windows whose command, or first label, matches
+.IR regexp .
+A window's command is matched when it opens
+.RB ( rc
+for a plain window), its label when the program first sets one.
+The properties are
+.BR float ,
+.BR tile ,
+.BI "width " n
+(pixels) or
+.BI "width " n / d
+(a fraction of the screen),
+.BI "workspace " n
+and, for floating windows,
+.BI "rect " "x0 y0 x1 y1" \fR.
+When several rules match, the later one wins for each property.
+A rule with the same
+.I regexp
+replaces the old one.
+.TP
+.BI "unrule '" regexp '
+Remove a rule.
+.TP
+.BI "spawn " \fR[\fPoptions\fR] [\fPcmd\fR]\fP
+Open a window running
+.I cmd
+(default
+.BR "rc -i" ).
+The options are
+.IR rio 's
+.B new
+options:
+.BI -r " x0 y0 x1 y1" \fR,
+.BI -dx " n" \fR,
+.BI -dy " n" \fR,
+.BR -hide ,
+.BR -scroll ,
+.BR -noscroll ,
+.BI -cd " dir
+and
+.BI -pid " pid" \fR.
+.TP
+.B delete
+Delete the focused window.
+.TP
+.B quit
+Exit at once.
+.TP
+.B show-hotkey-overlay
+Toggle the bindings overlay.
+.TP
+.I action
+Any of the layout actions below, as it would appear in a binding.
+.PD
+.PP
+The layout actions, named after niri's, are
+.BR focus-column-left ,
+.BR focus-column-right ,
+.BR focus-column-first ,
+.BR focus-column-last ,
+.BR focus-window-up ,
+.BR focus-window-down ,
+.BR focus-window-or-workspace-up ,
+.BR focus-window-or-workspace-down ,
+.BR move-column-left ,
+.BR move-column-right ,
+.BR move-window-up ,
+.BR move-window-down ,
+.BR move-window-up-or-to-workspace-up ,
+.BR move-window-down-or-to-workspace-down ,
+.BR consume-window-into-column ,
+.BR expel-window-from-column ,
+.BR consume-or-expel-window-left ,
+.BR consume-or-expel-window-right ,
+.BR center-column ,
+.BR maximize-column ,
+.BR fullscreen-window ,
+.BR switch-preset-column-width ,
+.BR switch-preset-column-width-back ,
+.BR switch-preset-window-height ,
+.BR reset-window-height ,
+.BR toggle-window-floating ,
+.BR switch-focus-between-floating-and-tiling ,
+.BR focus-workspace-up ,
+.BR focus-workspace-down ,
+.BR move-column-to-workspace-up ,
+.BR move-column-to-workspace-down ,
+.BR move-window-to-workspace-up ,
+.BR move-window-to-workspace-down ;
+with an argument,
+.BI "set-column-width " n %
+and
+.BI "set-window-height " n %
+(absolute, or relative with a sign, as in
+.BR -10% ),
+.BI "set-center " mode\fR,
+.BI "focus-workspace " n\fR,
+.BI "move-column-to-workspace " n
+and
+.BI "move-window-to-workspace " n\fR.
+.PP
+.I Rini
+exits on
+.BR quit .
+It sends
+.B hangup
+to every window's note group and to the startup script's,
+then
+.B kill
+a second later.
+.SH EXAMPLES
+A startup script,
+.BR $home/lib/rinistart :
+.IP
+.EX
+#!/bin/rc
+{
+	echo 'set background 0x777777FF' >/mnt/rini/ctl
+	echo 'bind Mod+e once spawn acme' >/mnt/rini/ctl
+	echo 'rule ''^games/'' float' >/mnt/rini/ctl
+	echo spawn >/mnt/rini/ctl
+} >[2]$home/lib/rinistart.log
+.EE
+.PP
+Start
+.I rini
+instead of
+.I rio
+at boot: in
+.BR $home/lib/profile ,
+replace
+.B "rio -i riostart"
+with
+.BR rini .
+.PP
+Watch the changes:
+.IP
+.EX
+cat /mnt/rini/event
+.EE
+.SH FILES
+.TF $home/lib/rinistart.log
+.TP
+.B $home/lib/rinistart
+The default startup script.
+.TP
+.B /mnt/rini
+The control tree.
+.TP
+.BI /srv/rini. user . pid
+The posted server.
+.PD
+.SH SOURCE
+.B src
+in the rini repository.
+.SH "SEE ALSO"
+.IR rio (1),
+.IR rio (4),
+.IR window (1)
+.SH BUGS
+When
+.I rini
+runs nested,
+.B /dev/snarf
+is the parent's and
+.I rini
+does not serve its own.
+.br
+Processes that put themselves in a new note group,
+.B &
+jobs of the startup script among them, outlive
+.IR rini .

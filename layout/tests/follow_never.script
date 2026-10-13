@@ -1,0 +1,11 @@
+size 1000 600
+gap 4
+add
+add
+add
+focus-column-first
+dump
+focus-column-right
+dump
+focus-column-last
+dump

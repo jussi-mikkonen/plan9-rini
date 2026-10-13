@@ -1,0 +1,33 @@
+size 1000 600
+# no column to the right: no-op
+add
+consume-window-into-column
+dump
+# a one-window right column disappears
+add
+focusid 1
+consume-window-into-column
+dump
+# a right column of two gives up only its top window
+add
+add
+focusid 3
+consume-window-into-column
+focusid 1
+consume-window-into-column
+dump
+# column full at MAXSTACK: consume is a silent no-op
+add
+add
+add
+add
+add
+focusid 1
+consume-window-into-column
+consume-window-into-column
+consume-window-into-column
+consume-window-into-column
+consume-window-into-column
+dump
+consume-window-into-column
+dump

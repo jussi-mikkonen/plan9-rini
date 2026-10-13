@@ -1,0 +1,20 @@
+# tile -> float keeps size and is centred; back -> new column right of focus
+size 1000 600
+add
+add
+add 1000
+add
+focus-column-left
+focus-column-left
+toggle-window-floating
+dumpall
+focusid 4
+toggle-window-floating
+dumpall
+toggle-window-floating
+dumpall
+focusid 2
+toggle-window-floating
+dumpall
+toggle-window-floating
+dumpall

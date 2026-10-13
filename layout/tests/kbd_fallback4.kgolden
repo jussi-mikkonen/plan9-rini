@@ -1,0 +1,103 @@
+> mod Ctrl+Alt
+ok
+> defaults
+> k F015
+fwd k F015
+> k F015 F017
+fwd k F015 F017
+> k F015 F017 8
+act focus-column-left
+> c 8
+> K F015 F017
+> K F015
+fwd K F015
+> K
+fwd K
+> k F015
+fwd k F015
+> k F015 F017
+fwd k F015 F017
+> k F015 F017 A
+act spawn
+> c A
+> K F015 F017
+> K F015
+fwd K F015
+> K
+fwd K
+> k F015
+fwd k F015
+> k F015 F017
+fwd k F015 F017
+> k F015 F017 15
+act focus-workspace-down
+> c 15
+> K F015 F017
+> K F015
+fwd K F015
+> K
+fwd K
+> k F015
+fwd k F015
+> k F015 F017
+fwd k F015 F017
+> k F015 F017 31
+act focus-workspace 1
+> c 31
+> K F015 F017
+> K F015
+fwd K F015
+> K
+fwd K
+> k F015
+fwd k F015
+> k F015 F017
+fwd k F015 F017
+> k F015 F017 12
+act switch-preset-column-width
+> c 12
+> K F015 F017
+> K F015
+fwd K F015
+> K
+fwd K
+> k F015
+fwd k F015
+> k F015 F017
+fwd k F015 F017
+> k F015 F017 2C
+act consume-window-into-column
+> c 2C
+> K F015 F017
+> K F015
+fwd K F015
+> K
+fwd K
+> k F015
+fwd k F015
+> k F015 F017
+fwd k F015 F017
+> k F015 F017 16
+act toggle-window-floating
+> c 16
+> K F015 F017
+> K F015
+fwd K F015
+> K
+fwd K
+> k F015
+fwd k F015
+> k F015 F017
+fwd k F015 F017
+> k F015 F017 F016
+fwd k F015 F017 F016
+> k F015 F017 F016 6
+act fullscreen-window
+> c 6
+> K F015 F017 F016
+> K F015 F017
+fwd K F015 F017
+> K F015
+fwd K F015
+> K
+fwd K

@@ -1,0 +1,16 @@
+> mod leader BackSpace
+error leader key must not be a modifier, printable or control key
+> mod leader Escape
+error leader key must not be a modifier, printable or control key
+> mod leader Tab
+error leader key must not be a modifier, printable or control key
+> mod leader Return
+error leader key must not be a modifier, printable or control key
+> mod leader Delete
+error leader key must not be a modifier, printable or control key
+> mod leader a
+error leader key must not be a modifier, printable or control key
+> mod leader F12
+ok
+> modfmt
+leader F12

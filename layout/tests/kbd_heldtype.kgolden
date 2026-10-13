@@ -1,0 +1,50 @@
+> defaults
+> k F868
+fwd k F868
+> k F868 6C
+act focus-column-right
+> c 6C
+> k F868 6C 78
+fwd k F868 78
+> c 78
+fwd c 78
+> c 78
+fwd c 78
+> K F868 6C
+fwd K F868
+> c 6C
+act focus-column-right
+> K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 6C
+act focus-column-right
+> c 6C
+> k F868 6C F016
+fwd k F868 F016
+> k F868 6C F016 78
+fwd k F868 F016 78
+> c 58
+fwd c 58
+> K F868 6C F016
+fwd K F868 F016
+> K F868 6C
+fwd K F868
+> K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 F016
+fwd k F868 F016
+> k F868 F016 72
+act switch-preset-column-width-back
+> c 52
+> c 52
+> K F868 F016
+> K F868
+fwd K F868
+> K
+fwd K

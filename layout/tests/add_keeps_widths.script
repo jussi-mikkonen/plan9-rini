@@ -1,0 +1,7 @@
+size 1000 600
+gap 4
+add
+set-column-width 33%
+focus-column-right
+add
+dump

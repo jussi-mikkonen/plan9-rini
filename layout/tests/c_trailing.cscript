@@ -1,0 +1,6 @@
+# unbind and termbind take exactly their words
+parse unbind Mod+h extra
+parse unbind Mod+h  
+parse termbind Ctrl+u kill-line junk
+parse termbind Ctrl+u hold on
+parse termbind Ctrl+u kill-line

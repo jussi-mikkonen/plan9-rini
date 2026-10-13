@@ -1,0 +1,22 @@
+# malformed lines return an error naming the problem
+parse bind
+parse bind Mod+e
+parse bind Mod+e repeat
+parse unbind
+parse termbind Ctrl+u
+parse termbind
+parse set
+parse set mod
+parse set bogus 1
+parse set c64return maybe
+parse set background nothex
+parse rule
+parse rule '('
+parse rule 'open float
+parse unrule
+parse unrule a b
+parse rule a 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+parse rule a 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+parselong 1023
+parselong 1024
+parselong 1025

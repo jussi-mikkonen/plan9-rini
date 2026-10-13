@@ -1,0 +1,77 @@
+> parse bind Mod+e spawn acme -f x
+verb=bind set=-
+arg[0]=[Mod+e]
+arg[1]=[once]
+rest=[spawn acme -f x]
+> parse bind Mod+h repeat focus-column-left
+verb=bind set=-
+arg[0]=[Mod+h]
+arg[1]=[repeat]
+rest=[focus-column-left]
+> parse bind Mod+j once focus-window-down
+verb=bind set=-
+arg[0]=[Mod+j]
+arg[1]=[once]
+rest=[focus-window-down]
+> parse   bind   Mod+k   repeat   spawn  a  b
+verb=bind set=-
+arg[0]=[Mod+k]
+arg[1]=[repeat]
+rest=[spawn  a  b]
+> parse unbind Mod+e
+verb=unbind set=-
+arg[0]=[Mod+e]
+> parse termbind Ctrl+u killline
+verb=termbind set=-
+arg[0]=[Ctrl+u]
+arg[1]=[killline]
+> parse set c64return off
+verb=set set=c64return
+arg[0]=[off]
+> parse set center always
+verb=set set=center
+arg[0]=[always]
+> parse set mod Ctrl+Alt
+verb=set set=mod
+arg[0]=[Ctrl+Alt]
+> parse set mod leader F12
+verb=set set=mod
+arg[0]=[leader F12]
+> parse set background 0x224466FF
+verb=set set=background
+arg[0]=[0x224466FF]
+colour=0x224466FF
+> parse rule '^(sudoku|mines)$' float width 1/3
+verb=rule set=-
+arg[0]=[^(sudoku|mines)$]
+arg[1]=[float]
+arg[2]=[width]
+arg[3]=[1/3]
+> parse rule 'a''b' float
+verb=rule set=-
+arg[0]=[a'b]
+arg[1]=[float]
+> parse unrule '^x$'
+verb=unrule set=-
+arg[0]=[^x$]
+> parse spawn
+verb=spawn set=-
+rest=[]
+> parse spawn -dx 400 acme -f x
+verb=spawn set=-
+rest=[-dx 400 acme -f x]
+> parse focus-column-left
+verb=action set=-
+rest=[focus-column-left]
+> parse quit
+verb=action set=-
+rest=[quit]
+> parse delete
+verb=action set=-
+rest=[delete]
+> parse nonsense-verb 3
+verb=action set=-
+rest=[nonsense-verb 3]
+> parse bindx foo
+verb=action set=-
+rest=[bindx foo]

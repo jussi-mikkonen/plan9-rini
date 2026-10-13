@@ -1,0 +1,117 @@
+# default table
+k init
+k defaults
+k dump
+# arrows, scroll, paging
+k look 0 F011
+k look 0 F00E
+k look 1 F00E
+k look 1 F800
+k look 0 F00F
+k look 0 F013
+k look 0 F00D
+k look 0 F018
+# editing and control keys
+# Shift+Return is newline, Return stays return
+k look 1 A
+k look 0 A
+k look 0 15
+k look 0 17
+k look 0 8
+k look 0 1
+k look 0 5
+k look 0 2
+k look 0 1B
+k look 0 A
+k look 0 7F
+k look 0 6
+k look 0 F014
+k look 0 9
+# insert and shift fallback
+k look 0 61
+k look 1 F011
+k look 1 41
+# rebind replaces, size unchanged
+k add Ctrl+u line-start
+k look 0 15
+k dump
+k add Shift+Prior top
+k look 1 F00F
+k look 0 F00F
+# errors
+k add Ctrl+u frobnicate
+k add Mod+u left
+k add Alt+x left
+k add Ctrl+Left left
+k add Nokey left
+# c64 flag
+k c64 0
+k dump
+# table full: 64 fit, the 65th is refused
+k init
+k add a insert
+k add b insert
+k add c insert
+k add d insert
+k add e insert
+k add f insert
+k add g insert
+k add h insert
+k add i insert
+k add j insert
+k add k insert
+k add l insert
+k add m insert
+k add n insert
+k add o insert
+k add p insert
+k add q insert
+k add r insert
+k add s insert
+k add t insert
+k add u insert
+k add v insert
+k add w insert
+k add x insert
+k add y insert
+k add z insert
+k add Shift+a insert
+k add Shift+b insert
+k add Shift+c insert
+k add Shift+d insert
+k add Shift+e insert
+k add Shift+f insert
+k add Shift+g insert
+k add Shift+h insert
+k add Shift+i insert
+k add Shift+j insert
+k add Shift+k insert
+k add Shift+l insert
+k add Shift+m insert
+k add Shift+n insert
+k add Shift+o insert
+k add Shift+p insert
+k add Shift+q insert
+k add Shift+r insert
+k add Shift+s insert
+k add Shift+t insert
+k add Shift+u insert
+k add Shift+v insert
+k add Shift+w insert
+k add Shift+x insert
+k add Shift+y insert
+k add Shift+z insert
+k add 0 insert
+k add 1 insert
+k add 2 insert
+k add 3 insert
+k add 4 insert
+k add 5 insert
+k add 6 insert
+k add 7 insert
+k add 8 insert
+k add 9 insert
+k add Ctrl+a insert
+k add Ctrl+b insert
+k add Ctrl+c insert
+k dump

@@ -1,0 +1,71 @@
+> tapfocus 4
+> tappush ca
+> tappush cb
+> tapfocus 7
+> tappush kq
+> tapread 2
+short
+> tapread
+tap 3 [z4\0]
+> tapread
+tap 3 [ca\0]
+> tapread
+tap 3 [cb\0]
+> tapread
+tap 3 [z7\0]
+> tapread
+tap 3 [kq\0]
+> tappush a
+> tappush a
+> tappush a
+> tappush a
+> tappush a
+> tappush a
+> tappush a
+> tappush a
+> tappush a
+> tappush a
+> tappush a
+> tappush a
+> tappush a
+> tappush a
+> tappush a
+> tappush a
+> tappush a
+> tappush a
+> tappush a
+> tappush a
+> tappush a
+> tappush a
+> tappush a
+> tappush a
+> tappush a
+> tappush a
+> tappush a
+> tappush a
+> tappush a
+> tappush a
+> tappush a
+> tappush a
+> tappush a
+full
+> tapread
+tap 2 [a\0]
+> tapfocus 9
+> tappush b
+full
+> tapread
+tap 2 [a\0]
+> tapread
+tap 2 [a\0]
+> tapsplit 636100636200
+split 2
+msg 2 [ca]
+msg 2 [cb]
+> tapsplit 7a3400636100
+split 1
+msg 2 [ca]
+> tapsplit 63
+error malformed key
+> tapsplit 00636100
+error null message type

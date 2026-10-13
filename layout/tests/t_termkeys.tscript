@@ -1,0 +1,19 @@
+# terminal keys as c delivers them: Shift+letter is the capital, Shift+digit
+# or punctuation is layout-dependent, Ctrl+@ is NUL (never delivered), and
+# Ctrl+h/i/j/[ are the BackSpace/Tab/Return/Escape runes
+k init
+k defaults
+k add Shift+a hold
+k look 1 41
+k look 0 61
+k add Shift+1 hold
+k add Shift+minus hold
+k add Ctrl+@ hold
+k add Ctrl+j newline
+k add Ctrl+i tab
+k add Ctrl+[ hold
+k add Ctrl+h backspace
+k add Ctrl+m newline
+k look 0 A
+k look 0 D
+k dump

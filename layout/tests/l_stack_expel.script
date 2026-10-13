@@ -1,0 +1,30 @@
+size 1000 600
+# lone window: expel is a no-op
+add
+expel-window-from-column
+dump
+# expel moves the focused window to a new column, width kept
+add 300
+add
+focusid 2
+consume-window-into-column
+focus-window-down
+expel-window-from-column
+dump
+# consume-or-expel-left on a lone window joins the left neighbour
+consume-or-expel-window-left
+dump
+# on a stacked window it expels to a new column on the left
+consume-or-expel-window-left
+dump
+# consume-or-expel-right: lone window joins the right neighbour
+consume-or-expel-window-right
+dump
+# stacked window expels to the right
+consume-or-expel-window-right
+dump
+# lone window at the strip edges: no-ops
+consume-or-expel-window-right
+focus-column-first
+consume-or-expel-window-left
+dump

@@ -1,0 +1,63 @@
+</$objtype/mkfile
+
+# Golden tests, run by mkone's test rule (cd test && mk test).
+# Sources live in .. and ../../layout; the Linux harness runs the same goldens.
+CFLAGS=$CFLAGS -DPLAN9 -I..
+L=../../layout
+HFILES=../layout.h ../desk.h ../action.h ../compat.h ../keys.h ../bind.h ../input.h ../wctl.h ../wq.h ../tkeys.h ../tbuf.h ../ctl.h ../rule.h ../ev.h $L/script.h
+CORE=action.$O layout.$O desk.$O
+KBD=input.$O bind.$O
+
+all:V: $O.layouttest $O.kbdtest $O.wintest $O.termtest $O.ctltest
+
+$O.layouttest: test.$O $CORE
+	$LD -o $target $prereq
+
+$O.kbdtest: kbdtest.$O $KBD
+	$LD -o $target $prereq
+
+$O.wintest: wintest.$O wctl.$O wq.$O ctl.$O $CORE $KBD
+	$LD -o $target $prereq
+
+$O.termtest: termtest.$O tkeys.$O tbuf.$O $KBD
+	$LD -o $target $prereq
+
+$O.ctltest: ctltest.$O ctl.$O rule.$O ev.$O $CORE $KBD
+	$LD -o $target $prereq
+
+%.$O: $HFILES
+
+# no stem has a source in both directories
+%.$O: ../%.c
+	$CC $CFLAGS -o $target ../$stem.c
+
+%.$O: $L/%.c
+	$CC $CFLAGS -o $target $L/$stem.c
+
+# t driver script-ext golden-ext
+test:V: all
+	fail=0
+	fn t {
+		for(s in $L/tests/*.$2){
+			n=`{basename $s .$2}
+			./$O.$1 <$s >/tmp/rini.test.out
+			if(cmp -s $L/tests/$n.$3 /tmp/rini.test.out)
+				echo PASS $n
+			if not{
+				echo FAIL $n
+				fail=1
+			}
+		}
+	}
+	t layouttest script golden
+	t kbdtest kscript kgolden
+	t wintest wscript wgolden
+	t termtest tscript tgolden
+	t ctltest cscript cgolden
+	rm -f /tmp/rini.test.out
+	if(~ $fail 1)
+		exit fail
+	exit ''
+
+clean:V:
+	rm -f *.[05678qv] [05678qv].layouttest [05678qv].kbdtest [05678qv].wintest [05678qv].termtest [05678qv].ctltest

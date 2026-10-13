@@ -1,0 +1,11 @@
+# a stalled reader: oldest whole lines dropped, exactly one overflow line
+snap 1 1 0
+commit
+reader
+reader
+evpush 0 3000 xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+drain 0 3
+# a partly read head line (wsadd 1) is finished before the overflow line
+read 1 5
+evpush 1 3000 xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+drain 1 3

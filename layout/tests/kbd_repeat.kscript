@@ -1,0 +1,21 @@
+# once binding Mod+t: fires once, ignores cooked repeats and repeated k
+defaults
+k F868
+k F868 74
+c 74
+c 74
+c 74
+c 74
+k F868 74
+K F868
+K
+# repeat binding Mod+l: fires again on repeats
+k F868
+k F868 6C
+c 6C
+c 6C
+c 6C
+c 6C
+k F868 6C
+K F868
+K

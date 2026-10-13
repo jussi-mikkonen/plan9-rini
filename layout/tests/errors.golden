@@ -1,0 +1,8 @@
+error unknown action: frobnicate
+error bad argument: 0%
+error bad argument: 101%
+error bad argument: abc
+error bad argument: 5
+error bad argument: 
+error line too long
+error strip full

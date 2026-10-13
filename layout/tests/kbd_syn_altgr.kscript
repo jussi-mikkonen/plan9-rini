@@ -1,0 +1,59 @@
+# SYNTHETIC fixture (hand-made, NOT recorded): no AltGr or a-ring/a-umlaut/o-umlaut
+# trace was recorded. Shapes follow the recorded Kmod4 / c traces.
+# AltGr is Kaltgr F867 held while the symbol rune arrives in k and c (assumed form; unverified).
+mod Mod4
+defaults
+k F867
+k F867 7B
+c 7B
+K F867
+K
+k F867
+k F867 5B
+c 5B
+K F867
+K
+k F867
+k F867 5D
+c 5D
+K F867
+K
+k F867
+k F867 7D
+c 7D
+K F867
+K
+k F867
+k F867 5C
+c 5C
+K F867
+K
+k F867
+k F867 40
+c 40
+K F867
+K
+k F867
+k F867 24
+c 24
+K F867
+K
+k F867
+k F867 7C
+c 7C
+K F867
+K
+k F867
+k F867 7E
+c 7E
+K F867
+K
+k E5
+c E5
+K
+k E4
+c E4
+K
+k F6
+c F6
+K

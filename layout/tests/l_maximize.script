@@ -1,0 +1,28 @@
+size 1000 600
+add
+add 333
+dump
+# maximize keeps gaps; again restores
+maximize-column
+dump
+maximize-column
+dump
+# a preset while maximized clears the saved width: the next maximize maximizes
+maximize-column
+switch-preset-column-width
+dump
+maximize-column
+dump
+maximize-column
+# set-column-width while maximized clears it too
+maximize-column
+set-column-width 40%
+dump
+maximize-column
+dump
+maximize-column
+# maximize works on a stack
+focusid 1
+consume-window-into-column
+maximize-column
+dump

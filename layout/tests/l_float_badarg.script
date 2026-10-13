@@ -1,0 +1,12 @@
+# tile-only actions are no-ops in the float layer, but a bad argument is
+# still an error, as in the tile layer
+size 1000 600
+add
+add
+toggle-window-floating
+who
+set-column-width garbage
+set-window-height x
+set-column-width 50%
+set-window-height +10%
+dumpall

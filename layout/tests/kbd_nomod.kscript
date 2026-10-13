@@ -1,0 +1,6 @@
+# A binding must include Mod: one without can never fire (lookup always has Mod).
+bind F5 once spawn
+bind Ctrl+Alt+x once spawn
+bind Mod4+h once spawn
+bind Mod+F5 once spawn
+list

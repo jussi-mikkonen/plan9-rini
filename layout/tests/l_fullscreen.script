@@ -1,0 +1,34 @@
+# fullscreen is one Lfs entry; any focus change clears it; floats are exempt
+size 1000 600
+add
+add
+add
+fullscreen-window
+dumpall
+fullscreen-window
+dumpall
+fullscreen-window
+focus-column-left
+dumpall
+focus-column-right
+fullscreen-window
+focusid 1
+dumpall
+fullscreen-window
+close
+dumpall
+add
+fullscreen-window
+add
+dumpall
+maximize-column
+fullscreen-window
+dumpall
+fullscreen-window
+dumpall
+toggle-window-floating
+fullscreen-window
+dumpall
+fullscreen-window
+focus-workspace-down
+dumpall

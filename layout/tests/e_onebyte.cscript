@@ -1,0 +1,21 @@
+# read 1 returns a line byte by byte; read 4096 never crosses a line
+snap 1 1 7
+win 7 1 tile 500 ab
+commit
+reader
+read 0 1
+read 0 1
+read 0 1
+read 0 1
+read 0 1
+read 0 1
+read 0 1
+read 0 1
+read 0 1
+read 0 1
+read 0 4
+read 0 4096
+read 0 4096
+read 0 4096
+read 0 4096
+read 0 4096

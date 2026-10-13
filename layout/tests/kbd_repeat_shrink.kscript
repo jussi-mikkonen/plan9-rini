@@ -1,0 +1,11 @@
+# SYNTHETIC (hand-made). Only an identical repeated k list is a repeat tick;
+# a k whose list shrank, or an empty k, is not.
+defaults
+k F868
+k F868 6C
+# identical list: repeat tick
+k F868 6C
+# shrunk list (Kmod4 gone) and empty k: no tick
+k 6C
+k
+K

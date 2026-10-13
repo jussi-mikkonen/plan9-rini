@@ -1,0 +1,24 @@
+> colour 0x224466FF
+colour 0x224466FF
+> colour 0x224466ff
+colour 0x224466FF
+> colour 0X224466FF
+colour 0x224466FF
+> colour 0x224466
+error bad colour: 0x224466 (want 0xRRGGBBAA)
+> colour 224466FF
+error bad colour: 224466FF (want 0xRRGGBBAA)
+> colour 0xGGGGGGGG
+error bad colour: 0xGGGGGGGG (want 0xRRGGBBAA)
+> colour 0x224466FF00
+error bad colour: 0x224466FF00 (want 0xRRGGBBAA)
+> colour 0x
+error bad colour: 0x (want 0xRRGGBBAA)
+> colour 
+error bad colour:  (want 0xRRGGBBAA)
+> parse set background 0x224466
+error bad colour: 0x224466 (want 0xRRGGBBAA)
+> parse set background 0x224466ff
+verb=set set=background
+arg[0]=[0x224466ff]
+colour=0x224466FF

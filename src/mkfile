@@ -1,0 +1,21 @@
+</$objtype/mkfile
+
+BIN=$home/bin/$objtype
+TARG=rini
+OFILES=rini.$O render.$O win.$O fs.$O dev.$O spawn.$O layout.$O desk.$O action.$O bind.$O input.$O wctl.$O wq.$O tbuf.$O tkeys.$O term.$O mouse.$O ctl.$O rule.$O ev.$O ctlfs.$O overlay.$O
+HFILES=dat.h fns.h layout.h desk.h action.h bind.h input.h keys.h compat.h wctl.h wq.h tbuf.h tkeys.h ctl.h rule.h ev.h
+CFLAGS=$CFLAGS -DPLAN9 -I.
+
+</sys/src/cmd/mkone
+
+# mk test: mkone runs test/mkfile (golden tests).
+
+# mk install also installs the man page (needs write access to /sys/man/1).
+install:V: /sys/man/1/rini
+
+/sys/man/1/rini: ../man/1/rini
+	cp $prereq $target
+
+$O.out: /$objtype/lib/libdraw.a /$objtype/lib/libthread.a /$objtype/lib/lib9p.a /$objtype/lib/libc.a /$objtype/lib/libframe.a /$objtype/lib/libcomplete.a /$objtype/lib/libplumb.a /$objtype/lib/libregexp.a
+
+%.$O: $HFILES

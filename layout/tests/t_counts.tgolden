@@ -1,0 +1,102 @@
+> t init 1000 500
+> t ctl rawon
+flags=wake
+> t ctl rawon
+flags=none
+> t ctl rawoff
+flags=none
+> t show
+nr=0 qh=0 q0=0 q1=0 rawing=1 holding=0 nraw=0 chg=-1 trimmed=0
+text n=0 []
+> t ctl rawoff
+flags=wake
+> t show
+nr=0 qh=0 q0=0 q1=0 rawing=0 holding=0 nraw=0 chg=-1 trimmed=0
+text n=0 []
+> t ctl rawoff
+flags=none
+> t show
+nr=0 qh=0 q0=0 q1=0 rawing=0 holding=0 nraw=0 chg=-1 trimmed=0
+text n=0 []
+> t init 1000 500
+> t ctl rawon
+flags=wake
+> t ready
+notready
+> t raw 61 62
+flags=wake
+> t ready
+ready
+> t read 64
+cons n=2 [ab]
+> t raw 7F 4 A
+flags=wake
+> t read 64
+cons n=3 [\x7F\x04\x0A]
+> t ready
+notready
+> t ctl rawoff
+flags=wake
+> t init 1000 500
+> t ins 0 78 79
+> t ctl rawon
+flags=wake
+> t raw 61
+flags=wake
+> t read 64
+cons n=3 [xya]
+> t ctl rawoff
+flags=wake
+> t init 1000 500
+> t ctl rawon
+flags=wake
+> t raw 61
+flags=wake
+> t ctl rawoff
+flags=wake|show
+> t show
+nr=1 qh=0 q0=1 q1=1 rawing=0 holding=0 nraw=0 chg=0 trimmed=0
+text n=1 [a]
+> t ready
+notready
+> t ins 1 A
+> t read 64
+cons n=2 [a\x0A]
+> t init 1000 500
+> t ctl rawon
+flags=wake
+> t raw 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61 61
+flags=wake
+> t raw A
+flags=wake
+> t show
+nr=0 qh=0 q0=0 q1=0 rawing=1 holding=0 nraw=301 chg=-1 trimmed=0
+text n=0 []
+> t read 4096
+cons n=301 [aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\x0A]
+> t init 1000 500
+> t ctl rawon
+flags=wake
+> t ctl rawon
+flags=none
+> t ctl holdon
+flags=hold
+> t ctl reset
+flags=wake|hold
+> t show
+nr=0 qh=0 q0=0 q1=0 rawing=0 holding=0 nraw=0 chg=-1 trimmed=0
+text n=0 []
+> t ctl reset
+flags=none
+> t init 1000 500
+> t ins 0 78 79
+> t ctl rawon
+flags=wake
+> t raw 61 62
+flags=wake
+> t sel 1 1
+> t ctl rawoff
+flags=wake|show
+> t show
+nr=4 qh=0 q0=3 q1=3 rawing=0 holding=0 nraw=0 chg=0 trimmed=0
+text n=4 [xaby]

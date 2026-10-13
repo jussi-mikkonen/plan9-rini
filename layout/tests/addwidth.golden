@@ -1,0 +1,14 @@
+view 0 focus 1 n 1
+col 1 w 667 x 4 px 660 scr 4 4 664 596 full*
+view 0 focus 2 n 2
+col 1 w 667 x 4 px 660 scr 4 4 664 596 full
+col 2 w 100 x 668 px 95 scr 668 4 763 596 full*
+view 265 focus 3 n 3
+col 1 w 667 x 4 px 660 scr -261 4 399 596 part
+col 2 w 100 x 668 px 95 scr 403 4 498 596 full
+col 3 w 500 x 767 px 494 scr 502 4 996 596 full*
+view 1261 focus 4 n 4
+col 1 w 667 x 4 px 660 scr -1257 4 -597 596 off
+col 2 w 100 x 668 px 95 scr -593 4 -498 596 off
+col 3 w 500 x 767 px 494 scr -494 4 0 596 off
+col 4 w 1000 x 1265 px 992 scr 4 4 996 596 full*

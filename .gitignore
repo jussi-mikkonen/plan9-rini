@@ -1,0 +1,15 @@
+*.[0125678vqki]
+[0125678vqki].out
+[0125678vqki].layouttest
+[0125678vqki].kbdtest
+[0125678vqki].wintest
+[0125678vqki].termtest
+[0125678vqki].ctltest
+layout/layouttest
+layout/kbdtest
+layout/wintest
+layout/termtest
+layout/ctltest
+layout/*.o
+layout/out/
+/rini.trace

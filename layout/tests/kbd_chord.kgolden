@@ -1,0 +1,33 @@
+> defaults
+> mod Mod4
+ok
+> k F868
+fwd k F868
+> k F868 68
+act focus-column-left
+> c 68
+> K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 7A
+fwd k F868 7A
+> c 7A
+fwd c 7A
+> K F868
+fwd K F868
+> K
+fwd K
+> k F868
+fwd k F868
+> k F868 F016
+fwd k F868 F016
+> k F868 F016 72
+act switch-preset-column-width-back
+> c 52
+> K F868 F016
+> K F868
+fwd K F868
+> K
+fwd K

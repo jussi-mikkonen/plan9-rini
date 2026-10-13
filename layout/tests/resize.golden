@@ -1,0 +1,8 @@
+view 498 focus 3 n 3
+col 1 w 500 x 4 px 294 scr -494 4 -200 396 off
+col 2 w 500 x 302 px 294 scr -196 4 98 396 part
+col 3 w 500 x 600 px 294 scr 102 4 396 396 full*
+view 296 focus 3 n 3
+col 1 w 500 x 4 px 144 scr -292 4 -148 396 off
+col 2 w 500 x 152 px 144 scr -144 4 0 396 off
+col 3 w 500 x 300 px 144 scr 4 4 148 396 full*

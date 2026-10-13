@@ -1,0 +1,83 @@
+> t init 1000 500
+> t out 3B 20
+> t ins 2 6C 73
+> t show
+nr=4 qh=2 q0=4 q1=4 rawing=0 holding=0 nraw=0 chg=0 trimmed=0
+text n=4 [; ls]
+> t ready
+notready
+> t read 64
+notready
+> t ins 4 A
+> t ready
+ready
+> t read 64
+cons n=3 [ls\x0A]
+> t show
+nr=5 qh=5 q0=5 q1=5 rawing=0 holding=0 nraw=0 chg=0 trimmed=0
+text n=5 [; ls\x0A]
+> t ready
+notready
+> t init 1000 500
+> t ins 0 61 A 62 A
+> t read 64
+cons n=2 [a\x0A]
+> t read 64
+cons n=2 [b\x0A]
+> t ready
+notready
+> t init 1000 500
+> t ins 0 61 62 A
+> t read 1
+cons n=1 [a]
+> t read 1
+cons n=1 [b]
+> t read 1
+cons n=1 [\x0A]
+> t init 1000 500
+> t ins 0 61 62 63 4
+> t ready
+ready
+> t read 64
+cons n=3 [abc]
+> t show
+nr=4 qh=4 q0=4 q1=4 rawing=0 holding=0 nraw=0 chg=0 trimmed=0
+text n=4 [abc\x04]
+> t ins 4 4
+> t read 64
+cons n=0 []
+> t show
+nr=5 qh=5 q0=5 q1=5 rawing=0 holding=0 nraw=0 chg=0 trimmed=0
+text n=5 [abc\x04\x04]
+> t init 1000 500
+> t ins 0 61 62 4 63 A
+> t read 2
+cons n=2 [ab]
+> t read 64
+cons n=2 [c\x0A]
+> t init 1000 500
+> t ins 0 7A 7A
+> t show
+nr=2 qh=0 q0=2 q1=2 rawing=0 holding=0 nraw=0 chg=0 trimmed=0
+text n=2 [zz]
+> t out 78 A
+> t show
+nr=4 qh=2 q0=4 q1=4 rawing=0 holding=0 nraw=0 chg=0 trimmed=0
+text n=4 [x\x0Azz]
+> t read 64
+notready
+> t ins 4 A
+> t read 64
+cons n=3 [zz\x0A]
+> t init 1000 500
+> t out 61 62 63 64
+> t ins 4 65 66 67 68
+> t sel 6 7
+> t del 2 6
+> t show
+nr=4 qh=2 q0=2 q1=3 rawing=0 holding=0 nraw=0 chg=0 trimmed=0
+text n=4 [abgh]
+> t del 0 1
+> t show
+nr=3 qh=1 q0=1 q1=2 rawing=0 holding=0 nraw=0 chg=0 trimmed=0
+text n=3 [bgh]

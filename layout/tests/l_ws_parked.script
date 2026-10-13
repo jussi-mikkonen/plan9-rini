@@ -1,0 +1,13 @@
+# parked windows keep their real tile size; a round trip changes nothing
+size 1000 600
+add 300
+add 700
+focus-workspace-down
+add 400
+dumpall
+focus-workspace-up
+dumpall
+focus-workspace-down
+dumpall
+focus-workspace 1
+dumpall

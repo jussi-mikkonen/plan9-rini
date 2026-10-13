@@ -1,0 +1,142 @@
+> t init 1000 500
+> t out 3B 20 6C 73 A 66 6F 6F A 3B 20 
+> t ins 11 64 61 74 65
+> t key return
+flags=wake|show
+> t prompt
+prompt n=2 [3B 20]
+> t read 64
+cons n=5 [date\x0A]
+> t show
+nr=16 qh=16 q0=16 q1=16 rawing=0 holding=0 nraw=0 chg=0 trimmed=0
+text n=16 [; ls\x0Afoo\x0A; date\x0A]
+> t init 1000 500
+> t out 3B 20 6C 73 A 66 6F 6F A 3B 20
+> t key up
+flags=show
+> t key up
+flags=show
+> t show
+nr=11 qh=11 q0=2 q1=2 rawing=0 holding=0 nraw=0 chg=0 trimmed=0
+text n=11 [; ls\x0Afoo\x0A; ]
+> t key return
+flags=wake|show
+> t show
+nr=14 qh=11 q0=14 q1=14 rawing=0 holding=0 nraw=0 chg=0 trimmed=0
+text n=14 [; ls\x0Afoo\x0A; ls\x0A]
+> t read 64
+cons n=3 [ls\x0A]
+> t init 1000 500
+> t out 3B 20 6C 73 A 66 6F 6F A 3B 20
+> t ins 11 61 62 63
+> t sel 2 2
+> t key return
+flags=wake|show
+> t show
+nr=14 qh=11 q0=14 q1=14 rawing=0 holding=0 nraw=0 chg=0 trimmed=0
+text n=14 [; ls\x0Afoo\x0A; ls\x0A]
+> t read 64
+cons n=3 [ls\x0A]
+> t init 1000 500
+> t out 3B 20 6C 73 A 66 6F 6F A 3B 20
+> t sel 6 6
+> t key return
+flags=wake|show
+> t read 64
+cons n=4 [foo\x0A]
+> t init 1000 500
+> t out 25 20
+> t ins 2 78
+> t key return
+flags=wake|show
+> t prompt
+prompt n=2 [25 20]
+> t read 64
+cons n=2 [x\x0A]
+> t out 3B 20 65 63 68 6F A 25 20
+> t sel 6 6
+> t key return
+flags=wake|show
+> t read 64
+cons n=5 [echo\x0A]
+> t out 25 20 6C 73 A 25 20
+> t sel 19 19
+> t key return
+flags=wake|show
+> t read 64
+cons n=3 [ls\x0A]
+> t show
+nr=28 qh=28 q0=28 q1=28 rawing=0 holding=0 nraw=0 chg=0 trimmed=0
+text n=28 [% x\x0A; echo\x0A% echo\x0A% ls\x0A% ls\x0A]
+> t init 1000 500
+> t out 3B 20 6C 73 A 3B 20
+> t ins 7 61 62 63
+> t c64 0
+> t sel 2 2
+> t key return
+flags=wake|show
+> t show
+nr=11 qh=7 q0=11 q1=11 rawing=0 holding=0 nraw=0 chg=0 trimmed=0
+text n=11 [; ls\x0A; abc\x0A]
+> t read 64
+cons n=4 [abc\x0A]
+> t c64 1
+> t init 1000 500
+> t out 3B 20
+> t ins 2 61 62 63 64
+> t sel 4 4
+> t key return
+flags=wake|show
+> t show
+nr=7 qh=2 q0=5 q1=5 rawing=0 holding=0 nraw=0 chg=0 trimmed=0
+text n=7 [; ab\x0Acd]
+> t read 64
+cons n=3 [ab\x0A]
+> t init 1000 500
+> t out 3B 20
+> t ins 2 61 62 63 64
+> t sel 3 5
+> t key return
+flags=wake|show
+> t show
+nr=5 qh=2 q0=4 q1=4 rawing=0 holding=0 nraw=0 chg=0 trimmed=0
+text n=5 [; a\x0Ad]
+> t read 64
+cons n=2 [a\x0A]
+> t init 1000 500
+> t c64 1
+> t out 3B 20 6C 73 0A 66 6F 6F 0A 3B 20
+> t sel 3 3
+> t key newline
+flags=show
+> t show
+nr=12 qh=12 q0=4 q1=4 rawing=0 holding=0 nraw=0 chg=0 trimmed=0
+text n=12 [; l\x0As\x0Afoo\x0A; ]
+> t ready
+notready
+> t init 1000 500
+> t c64 1
+> t out 3B 20 6C 73 0A 66 6F 6F 0A 3B 20
+> t sel 2 4
+> t key newline
+flags=show
+> t show
+nr=10 qh=10 q0=3 q1=3 rawing=0 holding=0 nraw=0 chg=0 trimmed=0
+text n=10 [; \x0A\x0Afoo\x0A; ]
+> t ready
+notready
+> t init 1000 500
+> t out 3B 20
+> t ins 2 61 62 63 64
+> t sel 4 4
+> t key newline
+flags=show
+> t show
+nr=7 qh=2 q0=5 q1=5 rawing=0 holding=0 nraw=0 chg=0 trimmed=0
+text n=7 [; ab\x0Acd]
+> t ready
+ready
+> t read 64
+cons n=3 [ab\x0A]
+> t prompt
+prompt n=0 []

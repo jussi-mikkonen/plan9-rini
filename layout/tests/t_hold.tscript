@@ -1,0 +1,26 @@
+# a held window is not readable
+t init 1000 500
+t ins 0 61 A
+t ready
+t ctl holdon
+t ready
+t ctl holdon
+t ctl holdoff
+t ready
+t show
+t ctl holdoff
+t ready
+t read 64
+# holdoff at zero stays at zero
+t ctl holdoff
+t ctl holdoff
+t show
+# rawon clears hold (counted or toggled), so a raw reader is not blocked by Esc
+t ctl holdon
+t ctl holdon
+t ctl rawon
+t show
+t raw 61
+t ready
+t read 64
+t ctl rawoff

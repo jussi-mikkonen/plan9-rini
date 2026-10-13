@@ -1,0 +1,53 @@
+# one commit per change; every verb appears
+snap 1 1 0
+commit
+# new window on ws 1: open, focus
+win 1 1 tile 500 rc
+snap 1 1 1
+commit
+# workspace added; window opened on ws 2 by a rule: open, move, no focus line
+snap 2 1 1
+win 4 2 tile 500 acme
+commit
+# ws switch and back
+snap 2 2 1
+commit
+snap 2 1 1
+commit
+# float and tile
+win 1 1 float 0 rc
+commit
+win 1 1 tile 500 rc
+commit
+# hide and unhide
+win 1 1 hid 0 rc
+commit
+win 1 1 tile 500 rc
+commit
+# unhide onto a workspace other than the current one
+win 1 1 hid 0 rc
+commit
+snap 2 2 1
+win 1 1 tile 500 rc
+commit
+snap 2 1 1
+commit
+# label change
+win 1 1 tile 500 rc 12
+commit
+# a middle workspace deleted: wsdel plus move for the windows below
+snap 3 1 1
+win 5 3 tile 500 three
+commit
+snap 2 1 1
+win 5 2 tile 500 three
+commit
+# workspace removed
+snap 1 1 1
+unwin 4
+unwin 5
+commit
+# close; focus 0 when the last window closes
+unwin 1
+snap 1 1 0
+commit

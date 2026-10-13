@@ -1,0 +1,16 @@
+> summary Mod4 never 1 0x777777FF 12 2
+mod Mod4
+center never
+c64return on
+background 0x777777FF
+focus 12
+ws 2
+> summary Ctrl+Alt always 0 0x224466ff 0 1
+mod Ctrl+Alt
+center always
+c64return off
+background 0x224466FF
+focus 0
+ws 1
+> summary Mod4 never
+error bad summary line

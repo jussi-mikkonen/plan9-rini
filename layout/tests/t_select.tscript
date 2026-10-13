@@ -1,0 +1,67 @@
+# double-click on a word
+t init 1000 500
+t out 68 65 6C 6C 6F 20 77 6F 72 6C 64 A 66 6F 6F
+t dclick 7
+t dclick 6
+t dclick 11
+t dclick 2
+# at a line start or end: the whole line, newline included, as rio does
+t dclick 0
+t dclick 12
+t dclick 15
+# brackets: inside, on the open and on the close
+t init 1000 500
+t out 66 28 61 20 62 29
+t dclick 2
+t dclick 6
+t dclick 5
+# nested and quoted spans
+t init 1000 500
+t out 28 61 28 62 29 63 29 20 22 78 79 22
+t dclick 1
+t dclick 9
+# a click between a bracket pair selects the pair
+t init 1000 500
+t out 61 28 29 62
+t dclick 2
+# where completion starts
+t init 1000 500
+t out 3B 20 6C 73 20 2F 75 73 72 2F 67 6C 20 61 3D 62
+t wordstart 12
+t wordstart 5
+t wordstart 4
+t wordstart 0
+t wordstart 16
+# send: the selection goes to the end of the input with one newline
+t init 1000 500
+t out 3B 20 6C 73 A 3B 20
+t sel 2 4
+t send
+t show
+t read 64
+t init 1000 500
+t out 3B 20 78 A 3B 20
+t sel 2 4
+t send
+t show
+t read 64
+# pending input stays in front
+t init 1000 500
+t out 3B 20 6C 73 A 3B 20
+t ins 7 61 62
+t sel 2 4
+t send
+t show
+# nothing selected: nothing sent
+t init 1000 500
+t out 61 62
+t send
+t show
+# raw mode: the runes go to the raw queue
+t init 1000 500
+t out 61 62
+t ctl rawon
+t sel 0 2
+t send
+t show
+t read 64

@@ -1,0 +1,22 @@
+size 1000 600
+# two windows stacked: avail 600-3*4=588, 294 each
+add
+add
+focusid 1
+consume-window-into-column
+dump
+# three windows: avail 600-4*4=584, 194/194/196
+add
+focusid 1
+consume-window-into-column
+dump
+# short screen: avail 184 < 3*MINHPX, plain proportional split
+size 1000 200
+dump
+# 2-stack: a 10 px request is clamped so the window keeps MINHPX
+size 1000 600
+closeid 3
+heightpx 1 10
+dump
+size 1000 300
+dump

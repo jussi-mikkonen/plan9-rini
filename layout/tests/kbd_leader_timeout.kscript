@@ -1,0 +1,33 @@
+# A leader tap disarms after 1.5 s, and set mod drops the leader state.
+mod leader F12
+defaults
+# t sets the clock in ms for the messages that follow
+t 0
+k F00C
+K
+t 1400
+k 68
+c 68
+K
+t 2000
+k F00C
+K
+t 3600
+k 68
+c 68
+K
+# armed, then set mod again
+k F00C
+K
+mod leader F12
+k 68
+K
+# leader held across set mod: no longer held
+k F00C
+modheld
+mod Mod4
+mod leader F12
+modheld
+K
+k 68
+K

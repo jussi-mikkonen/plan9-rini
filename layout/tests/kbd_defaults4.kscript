@@ -1,0 +1,368 @@
+# SYNTHETIC, hand-made, not recorded. Default table under Mod4. Ctrl chords are
+# not verified live; this golden is their only gate. Ctrl+letter arrives
+# as the control rune (h = 8), Shift chords carry the unshifted rune.
+defaults
+mod Mod4
+list
+# focus window or workspace
+k F868
+k F868 6A
+c 6A
+K F868
+K
+k F868
+k F868 6B
+c 6B
+K F868
+K
+k F868
+k F868 F800
+c F800
+K F868
+K
+k F868
+k F868 F00E
+c F00E
+K F868
+K
+# move column / window
+k F868
+k F868 F017
+k F868 F017 8
+c 8
+K F868 F017
+K F868
+K
+k F868
+k F868 F017
+k F868 F017 C
+c C
+K F868 F017
+K F868
+K
+k F868
+k F868 F017
+k F868 F017 A
+c A
+K F868 F017
+K F868
+K
+k F868
+k F868 F017
+k F868 F017 B
+c B
+K F868 F017
+K F868
+K
+k F868
+k F868 F017
+k F868 F017 F011
+c F011
+K F868 F017
+K F868
+K
+k F868
+k F868 F017
+k F868 F017 F012
+c F012
+K F868 F017
+K F868
+K
+k F868
+k F868 F017
+k F868 F017 F800
+c F800
+K F868 F017
+K F868
+K
+k F868
+k F868 F017
+k F868 F017 F00E
+c F00E
+K F868 F017
+K F868
+K
+# consume / expel
+k F868
+k F868 2C
+c 2C
+K F868
+K
+k F868
+k F868 2E
+c 2E
+K F868
+K
+# workspaces
+k F868
+k F868 75
+c 75
+K F868
+K
+k F868
+k F868 69
+c 69
+K F868
+K
+k F868
+k F868 F013
+c F013
+K F868
+K
+k F868
+k F868 F00F
+c F00F
+K F868
+K
+k F868
+k F868 F017
+k F868 F017 15
+c 15
+K F868 F017
+K F868
+K
+k F868
+k F868 F017
+k F868 F017 9
+c 9
+K F868 F017
+K F868
+K
+k F868
+k F868 F017
+k F868 F017 F013
+c F013
+K F868 F017
+K F868
+K
+k F868
+k F868 F017
+k F868 F017 F00F
+c F00F
+K F868 F017
+K F868
+K
+k F868
+k F868 31
+c 31
+K F868
+K
+k F868
+k F868 32
+c 32
+K F868
+K
+k F868
+k F868 33
+c 33
+K F868
+K
+k F868
+k F868 34
+c 34
+K F868
+K
+k F868
+k F868 35
+c 35
+K F868
+K
+k F868
+k F868 36
+c 36
+K F868
+K
+k F868
+k F868 37
+c 37
+K F868
+K
+k F868
+k F868 38
+c 38
+K F868
+K
+k F868
+k F868 39
+c 39
+K F868
+K
+k F868
+k F868 F017
+k F868 F017 31
+c 31
+K F868 F017
+K F868
+K
+k F868
+k F868 F017
+k F868 F017 32
+c 32
+K F868 F017
+K F868
+K
+k F868
+k F868 F017
+k F868 F017 33
+c 33
+K F868 F017
+K F868
+K
+k F868
+k F868 F017
+k F868 F017 34
+c 34
+K F868 F017
+K F868
+K
+k F868
+k F868 F017
+k F868 F017 35
+c 35
+K F868 F017
+K F868
+K
+k F868
+k F868 F017
+k F868 F017 36
+c 36
+K F868 F017
+K F868
+K
+k F868
+k F868 F017
+k F868 F017 37
+c 37
+K F868 F017
+K F868
+K
+k F868
+k F868 F017
+k F868 F017 38
+c 38
+K F868 F017
+K F868
+K
+k F868
+k F868 F017
+k F868 F017 39
+c 39
+K F868 F017
+K F868
+K
+# floating, maximize, fullscreen
+k F868
+k F868 76
+c 76
+K F868
+K
+k F868
+k F868 F016
+k F868 F016 76
+c 56
+K F868 F016
+K F868
+K
+k F868
+k F868 66
+c 66
+K F868
+K
+k F868
+k F868 F016
+k F868 F016 66
+c 46
+K F868 F016
+K F868
+K
+# window height
+k F868
+k F868 F017
+k F868 F017 12
+c 12
+K F868 F017
+K F868
+K
+k F868
+k F868 F017
+k F868 F017 F016
+k F868 F017 F016 12
+c 12
+K F868 F017 F016
+K F868 F017
+K F868
+K
+k F868
+k F868 F016
+k F868 F016 2D
+c 5F
+K F868 F016
+K F868
+K
+k F868
+k F868 F016
+k F868 F016 2B
+c 2B
+K F868 F016
+K F868
+K
+k F868
+k F868 F016
+k F868 F016 3D
+c 2B
+K F868 F016
+K F868
+K
+# existing rows still resolve
+k F868
+k F868 74
+c 74
+K F868
+K
+k F868
+k F868 71
+c 71
+K F868
+K
+k F868
+k F868 68
+c 68
+K F868
+K
+k F868
+k F868 6C
+c 6C
+K F868
+K
+k F868
+k F868 63
+c 63
+K F868
+K
+k F868
+k F868 F016
+k F868 F016 65
+c 45
+K F868 F016
+K F868
+K
+k F868
+k F868 F00D
+c F00D
+K F868
+K
+# unbound: Mod+Shift+1 and Mod+Ctrl+0 pass through
+k F868
+k F868 F016
+k F868 F016 31
+c 21
+K F868 F016
+K F868
+K
+k F868
+k F868 F017
+k F868 F017 30
+c 30
+K F868 F017
+K F868
+K

@@ -1,0 +1,58 @@
+# kbdtap queue: z<id> before the first message after a focus change
+tapfocus 4
+tappush ca
+tappush cb
+tapfocus 7
+tappush kq
+# a too small buffer leaves the message queued
+tapread 2
+tapread
+tapread
+tapread
+tapread
+tapread
+# 32 slots: z7 already sent, so 32 pushes fit and the 33rd is full
+tappush a
+tappush a
+tappush a
+tappush a
+tappush a
+tappush a
+tappush a
+tappush a
+tappush a
+tappush a
+tappush a
+tappush a
+tappush a
+tappush a
+tappush a
+tappush a
+tappush a
+tappush a
+tappush a
+tappush a
+tappush a
+tappush a
+tappush a
+tappush a
+tappush a
+tappush a
+tappush a
+tappush a
+tappush a
+tappush a
+tappush a
+tappush a
+tappush a
+# a focus change with one free slot: z9 takes it and b, a plain message, is dropped
+tapread
+tapfocus 9
+tappush b
+tapread
+tapread
+# write-back
+tapsplit 636100636200
+tapsplit 7a3400636100
+tapsplit 63
+tapsplit 00636100
